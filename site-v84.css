@@ -723,3 +723,37 @@ button{font:inherit}
     background:#111;
   }
 }
+
+
+/* =========================================================
+   V8.4.3 — CLEAN REGIONAL PHOTO ARCHIVES
+   ========================================================= */
+.photo-wall{
+  grid-auto-flow:dense;
+}
+.photo-wall .third{
+  grid-column:span 4;
+  min-height:520px;
+}
+.photo-wall .half{
+  grid-column:span 6;
+  min-height:560px;
+}
+@media (min-width:768px){
+  .photo-wall img{
+    object-fit:contain !important;
+    object-position:center;
+    background:#111;
+  }
+}
+@media (max-width:767px){
+  .photo-wall .third,
+  .photo-wall .half{
+    flex:0 0 78vw;
+    width:78vw;
+    min-height:0;
+    height:auto;
+    aspect-ratio:4/5;
+    grid-column:auto;
+  }
+}
