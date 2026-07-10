@@ -43,18 +43,15 @@ a{color:inherit;text-decoration:none}
   justify-content:space-between;
   padding:18px 28px;
   color:white;
-  mix-blend-mode:difference;
 }
 .top-logo{
   width:62px;
   height:82px;
   overflow:hidden;
-  isolation:isolate;
 }
 .top-logo img{
   object-fit:cover;
   object-position:left center;
-  mix-blend-mode:normal;
 }
 .topbar nav{
   display:flex;
@@ -62,6 +59,9 @@ a{color:inherit;text-decoration:none}
   font-size:10px;
   letter-spacing:.14em;
   align-items:center;
+}
+.topbar nav a{
+  mix-blend-mode:difference;
 }
 .ig-link{
   display:flex;
@@ -419,6 +419,7 @@ footer p{
 }
 
 @media (max-width:900px){
+  html{scroll-snap-type:none}
   .topbar{padding:16px 18px}
   .topbar nav{gap:13px;font-size:8px}
   .topbar nav a:nth-child(2){display:none}
