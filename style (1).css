@@ -14,8 +14,6 @@ html{
 }
 .panel,
 .place,
-.city-archive,
-.dispenser,
 .find,
 .objects,
 .next,
@@ -43,22 +41,33 @@ a{color:inherit;text-decoration:none}
   justify-content:space-between;
   padding:18px 28px;
   color:white;
-  mix-blend-mode:difference;
 }
 .top-logo{
-  width:44px;
-  height:58px;
-  overflow:hidden;
+  width:84px;
+  height:auto;
+  display:block;
 }
 .top-logo img{
-  object-fit:cover;
-  object-position:left center;
+  width:100%;
+  height:auto;
+  display:block;
 }
 .topbar nav{
   display:flex;
   gap:24px;
   font-size:10px;
   letter-spacing:.14em;
+  align-items:center;
+}
+.topbar nav a{
+  mix-blend-mode:difference;
+}
+.ig-link{
+  display:flex;
+  align-items:center;
+}
+footer .ig-link{
+  margin-top:8px;
 }
 .panel{
   min-height:100vh;
@@ -177,9 +186,8 @@ a{color:inherit;text-decoration:none}
   overflow:hidden;
 }
 .place-photo img{
-  transition:transform 1.2s ease;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1);
 }
-.place:hover .place-photo img{transform:scale(1.018)}
 
 .find{
   background:#0c0c0c;
@@ -213,9 +221,33 @@ a{color:inherit;text-decoration:none}
   font-size:16px;
   line-height:1.65;
 }
-.find-list{
+.find-body{
   max-width:1180px;
   margin:0 auto;
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:56px;
+  align-items:start;
+}
+.find-visual-group{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.find-visual{
+  margin:0;
+  background:#111;
+  border:1px solid #262626;
+  padding:14px;
+  overflow:hidden;
+}
+.find-visual img{
+  width:100%;
+  height:auto;
+  display:block;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1);
+}
+.find-list{
   border-top:1px solid #222;
 }
 .find-row{
@@ -295,9 +327,8 @@ a{color:inherit;text-decoration:none}
 }
 .gallery figure img{
   aspect-ratio:4/5;
-  transition:transform 1s ease;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1);
 }
-.gallery figure:hover img{transform:scale(1.018)}
 .gallery .wide{
   grid-row:span 2;
 }
@@ -307,10 +338,26 @@ a{color:inherit;text-decoration:none}
 
 .next{
   background:#000;
+  display:flex;
+  flex-direction:column;
+}
+.next-visual{
+  margin:0;
+  width:100%;
+  height:44vh;
+  overflow:hidden;
+}
+.next-visual img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1);
+}
+.next-row{
   display:grid;
   grid-template-columns:1fr .75fr;
   gap:8vw;
-  padding:14vh 7vw;
+  padding:10vh 7vw 14vh;
   align-items:center;
 }
 .next-copy span,.archive-list span{
@@ -392,9 +439,9 @@ footer p{
 }
 
 @media (max-width:900px){
+  html{scroll-snap-type:none}
   .topbar{padding:16px 18px}
   .topbar nav{gap:13px;font-size:8px}
-  .topbar nav a:nth-child(2){display:none}
   .hero-logo{width:min(88vw,620px)}
   .manifesto{padding:14vh 22px 10vh}
   .manifesto>p{margin:28px 0 0;width:220px}
@@ -409,9 +456,12 @@ footer p{
   .gallery{grid-template-columns:1fr}
   .gallery .wide{grid-row:auto}
   .gallery figure img,.gallery .wide img{aspect-ratio:4/5}
-  .next{
+  .next-row{
     grid-template-columns:1fr;
-    padding:100px 22px;
+    padding:60px 22px 100px;
+  }
+  .next-visual{
+    height:32vh;
   }
   footer{
     grid-template-columns:1fr;
@@ -457,6 +507,53 @@ footer p{
   font-weight:500;
   max-width:470px;
 }
+.notes{
+  margin:30px 0 0;
+  padding-top:20px;
+  border-top:1px solid rgba(0,0,0,.14);
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+  max-width:470px;
+}
+.notes-row{
+  display:grid;
+  grid-template-columns:64px 1fr;
+  gap:16px;
+  font-size:13px;
+  line-height:1.5;
+}
+.notes-label{
+  font-size:10px;
+  letter-spacing:.16em;
+  color:#888;
+  padding-top:2px;
+}
+.notes-value{
+  color:inherit;
+  opacity:.82;
+}
+.place-seoul .notes{
+  border-top-color:rgba(255,255,255,.16);
+}
+.place-seoul .notes-label{
+  color:#888;
+}
+.place-filmstrip{
+  grid-column:1 / -1;
+  width:100vw;
+  position:relative;
+  left:50%;
+  right:50%;
+  margin-left:-50vw;
+  margin-right:-50vw;
+  margin-top:6vh;
+  padding-top:5vh;
+  border-top:1px solid rgba(0,0,0,.1);
+}
+.place-seoul .place-filmstrip{
+  border-top-color:rgba(255,255,255,.12);
+}
 .place-photo{
   min-height:0;
   height:min(72vh,760px);
@@ -472,9 +569,6 @@ footer p{
   max-height:680px;
   object-fit:contain;
   object-position:center;
-}
-.place:hover .place-photo img{
-  transform:scale(1.01);
 }
 
 .objects{
@@ -534,6 +628,11 @@ footer p{
   }
   .place-seoul .place-photo{order:0}
   .place-seoul .place-text{order:1}
+  .place-filmstrip{order:2}
+  .place-filmstrip{
+    margin-top:0;
+    padding-top:36px;
+  }
   .place-photo{
     height:auto;
     min-height:0;
@@ -569,175 +668,54 @@ footer p{
 }
 
 
-/* V7.2 — city archive and vending machine */
-.city-archive{
-  background:#e9e6df;
-  color:#111;
-  padding:13vh 7vw 15vh;
+/* Filmstrip (used inside each place section) */
+.filmstrip-track-wrap{
+  overflow:hidden;
+  width:100%;
 }
-.section-intro{
-  max-width:1180px;
-  margin:0 auto 9vh;
-  display:grid;
-  grid-template-columns:180px 1fr 320px;
-  gap:5vw;
-  align-items:end;
+.filmstrip-track{
+  display:flex;
+  gap:20px;
+  width:max-content;
+  animation-name:filmstrip-scroll;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
 }
-.section-intro>span,
-.city-label span,
-.dispenser-copy>span{
-  font-size:11px;
-  letter-spacing:.17em;
+.place-filmstrip:hover .filmstrip-track{
+  animation-play-state:paused;
 }
-.section-intro h2,
-.dispenser-copy h2{
-  margin:0;
-  font-family:"DM Serif Display",Georgia,serif;
-  font-size:clamp(50px,5.8vw,86px);
-  line-height:.9;
-  font-weight:400;
-  letter-spacing:-.04em;
-}
-.section-intro p{
-  margin:0;
-  font-size:16px;
-  line-height:1.65;
-}
-.city-grid{
-  max-width:1180px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(12,1fr);
-  gap:70px 28px;
-}
-.city-card{
-  margin:0;
+.filmstrip-track img{
+  flex:0 0 auto;
+  width:auto;
+  height:42vh;
+  max-height:440px;
+  object-fit:cover;
   background:#e7e3dc;
-  padding:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1);
 }
-.city-card-large{
-  grid-column:1 / -1;
+.filmstrip-track img:hover{
+  transform:scale(1.08);
+  position:relative;
+  z-index:2;
 }
-.city-label{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:14px;
-  padding-bottom:12px;
-  border-bottom:1px solid rgba(0,0,0,.22);
+@keyframes filmstrip-scroll{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
 }
-.city-label strong{
-  font-family:"DM Serif Display",Georgia,serif;
-  font-size:24px;
-  font-weight:400;
-}
-.city-card img{
-  width:100%;
-  height:auto;
-  max-height:58vh;
-  object-fit:contain;
-  aspect-ratio:auto;
-}
-
-@media (min-width:901px){
-  .city-card-large{
-    grid-column:1 / 8;
-  }
-  .city-card:nth-of-type(2){
-    grid-column:8 / 13;
-    margin-top:9vh;
-  }
-  .city-card:nth-of-type(3){
-    grid-column:1 / 6;
-  }
-  .city-card:nth-of-type(4){
-    grid-column:6 / 13;
-    margin-top:-6vh;
-  }
-  .city-card:nth-of-type(5){
-    grid-column:2 / 9;
-  }
-}
-
-.dispenser{
-  background:#050505;
-  color:white;
-  padding:13vh 7vw 15vh;
-}
-.dispenser-copy{
-  max-width:1180px;
-  margin:0 auto 9vh;
-  display:grid;
-  grid-template-columns:180px 1fr 320px;
-  gap:5vw;
-  align-items:end;
-}
-.dispenser-copy p{
-  margin:0;
-  color:#bbb;
-  font-size:17px;
-  line-height:1.65;
-}
-.dispenser-grid{
-  max-width:1180px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(12,1fr);
-  gap:28px;
-  align-items:start;
-}
-.dispenser-grid figure{
-  margin:0;
-  background:#111;
-  border:1px solid #262626;
-  padding:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.dispenser-grid img{
-  width:100%;
-  height:auto;
-  max-height:56vh;
-  object-fit:contain;
-  aspect-ratio:auto;
-}
-.dark-label{
-  border-color:#2b2b2b;
-}
-.dark-label strong{
-  color:var(--red);
-}
-
-@media (min-width:901px){
-  .dispenser-grid figure:first-child{
-    grid-column:1 / 8;
-  }
-  .dispenser-grid figure:last-child{
-    grid-column:8 / 13;
-    margin-top:10vh;
+@media (prefers-reduced-motion:reduce){
+  .filmstrip-track{
+    animation:none;
   }
 }
 
 @media (max-width:900px){
-  .topbar nav a:nth-child(3),
-  .topbar nav a:nth-child(4){display:none}
-  .section-intro,
-  .dispenser-copy,
   .find-copy{
     grid-template-columns:1fr;
     gap:22px;
   }
-  .section-intro p,
-  .dispenser-copy p,
   .find-copy p{
     max-width:320px;
   }
-  .city-archive,
-  .dispenser,
   .find{
     padding:95px 22px 110px;
   }
@@ -749,21 +727,47 @@ footer p{
   .find-go{
     justify-self:start;
   }
-  .city-grid,
-  .dispenser-grid{
+  .find-body{
     grid-template-columns:1fr;
-    gap:44px;
+    gap:36px;
   }
-  .city-card,
-  .city-card-large,
-  .dispenser-grid figure{
-    grid-column:auto;
-    max-width:none;
-    margin-top:0;
-    padding:14px;
+  .find-visual-group{
+    max-width:340px;
+    margin:0 auto;
   }
-  .city-card img,
-  .dispenser-grid img{
-    max-height:none;
+  .filmstrip-track img{
+    height:30vh;
+  }
+  .place-korea .filmstrip-track{
+    animation-duration:20s !important;
+  }
+  .place-seoul .filmstrip-track{
+    animation-duration:30s !important;
+  }
+  .place-seongsu .filmstrip-track{
+    animation-duration:22s !important;
+  }
+}
+
+/* Unified hover-zoom: image scales up within its frame on hover */
+.place:hover .place-photo img{
+  transform:scale(1.06);
+}
+.gallery figure:hover img{
+  transform:scale(1.06);
+}
+.find-visual:hover img{
+  transform:scale(1.06);
+}
+.next-visual:hover img{
+  transform:scale(1.06);
+}
+@media (hover:none){
+  .place:hover .place-photo img,
+  .gallery figure:hover img,
+  .find-visual:hover img,
+  .next-visual:hover img,
+  .filmstrip-track img:hover{
+    transform:none;
   }
 }
