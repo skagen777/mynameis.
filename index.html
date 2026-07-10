@@ -7,97 +7,91 @@
   <meta name="description" content="장소가 자신의 이름을 향으로 소개합니다.">
   <meta property="og:title" content="MY NAME IS.">
   <meta property="og:description" content="Every town has a smell.">
-  <meta property="og:image" content="https://my-nameis.com/assets/collection-product.webp">
+  <meta property="og:image" content="https://my-nameis.com/assets/brand-korea.webp">
   <link rel="canonical" href="https://my-nameis.com/">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#d50000">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="site-v83.css?v=83">
+  <link rel="stylesheet" href="site-v84.css?v=841">
 </head>
-<body class="home">
-  <header class="home-header">
+<body class="home-page is-locked">
+  <section class="entry-screen" id="entryScreen" aria-label="MY NAME IS. introduction">
+    <button class="entry-button" id="enterArchive" type="button" aria-label="아카이브 입장">
+      <img src="assets/intro-poster.png" alt="We do not sell online. Because fragrance only exists offline.">
+      <span class="entry-prompt">
+        <b>TOUCH TO ENTER</b>
+        <i></i>
+      </span>
+    </button>
+  </section>
+
+  <header class="archive-header">
     <span>PLACE ARCHIVE / 001—003</span>
     <a href="https://www.instagram.com/mynameis_offcial/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
   </header>
 
-  <main class="mosaic-page">
-    <section class="mosaic" aria-label="MY NAME IS. Place Archive">
-      <a class="tile tile-korea" href="korea.html" data-touch-tile>
-        <img class="base" src="assets/korea-city-01.webp" alt="Korea">
-        <img class="reveal-product" src="assets/korea-product.webp" alt="Korea perfume">
-        <span class="tile-number">001</span>
-        <span class="tile-name">KOREA</span>
-        <span class="tile-view">VIEW PLACE ↗</span>
+  <main class="archive-shell" id="placeArchive">
+    <section class="archive-grid" aria-label="Place Archive">
+      <a class="archive-tile" href="korea.html" data-touch-tile>
+        <img class="archive-image" src="assets/brand-korea.webp" alt="Korea">
+        <img class="product-image" src="assets/product-korea.webp" alt="Korea perfume">
+        <div class="tile-ui"><span>001</span><strong>KOREA</strong><small>VIEW PLACE ↗</small></div>
       </a>
 
-      <a class="tile tile-seoul" href="seoul.html" data-touch-tile>
-        <img class="base" src="assets/seoul-city-01.webp" alt="Seoul">
-        <img class="reveal-product" src="assets/seoul-product.webp" alt="Seoul perfume">
-        <span class="tile-number">002</span>
-        <span class="tile-name">SEOUL</span>
-        <span class="tile-view">VIEW PLACE ↗</span>
+      <a class="archive-tile" href="seoul.html" data-touch-tile>
+        <img class="archive-image" src="assets/brand-seoul-01.webp" alt="Seoul">
+        <img class="product-image" src="assets/product-seoul.webp" alt="Seoul perfume">
+        <div class="tile-ui"><span>002</span><strong>SEOUL</strong><small>VIEW PLACE ↗</small></div>
       </a>
 
-      <a class="tile tile-seongsu" href="seongsu.html" data-touch-tile>
-        <img class="base" src="assets/seongsu-city-01.webp" alt="Seongsu">
-        <img class="reveal-product" src="assets/seongsu-product.webp" alt="Seongsu perfume">
-        <span class="tile-number">003</span>
-        <span class="tile-name">SEONGSU</span>
-        <span class="tile-view">VIEW PLACE ↗</span>
+      <a class="archive-tile" href="seongsu.html" data-touch-tile>
+        <img class="archive-image" src="assets/brand-seongsu-01.webp" alt="Seongsu">
+        <img class="product-image" src="assets/product-seongsu.webp" alt="Seongsu perfume">
+        <div class="tile-ui"><span>003</span><strong>SEONGSU</strong><small>VIEW PLACE ↗</small></div>
       </a>
 
-      <a class="tile tile-vending-korea" href="dispenser.html" data-touch-tile>
-        <img class="base" src="assets/vending-korea.webp" alt="Korea vending machine">
-        <img class="reveal-product" src="assets/collection-product.webp" alt="Perfume collection">
-        <span class="tile-number">OFFLINE 001</span>
-        <span class="tile-name">DISPENSER</span>
-        <span class="tile-view">FIND US ↗</span>
+      <a class="archive-tile" href="dispenser.html" data-touch-tile>
+        <img class="archive-image" src="assets/brand-vending-korea.webp" alt="Korea perfume vending machine">
+        <img class="product-image" src="assets/product-collection.webp" alt="Perfume collection">
+        <div class="tile-ui"><span>OFFLINE 001</span><strong>DISPENSER</strong><small>FIND US ↗</small></div>
       </a>
 
-      <div class="center-logo">
+      <div class="archive-logo" aria-label="MY NAME IS.">
         <img src="assets/brand-logo.png" alt="my name is.">
         <p>Every town<br>has a smell.</p>
-        <span>HOVER A PLACE</span>
+        <span>SELECT A PLACE</span>
       </div>
 
-      <a class="tile tile-vending-city" href="dispenser.html" data-touch-tile>
-        <img class="base" src="assets/vending-somewhere.webp" alt="Vending machine somewhere">
-        <img class="reveal-product" src="assets/package-still.webp" alt="MY NAME IS. package">
-        <span class="tile-number">OFFLINE / NEXT</span>
-        <span class="tile-name">SOMEWHERE</span>
-        <span class="tile-view">FIND US ↗</span>
+      <a class="archive-tile" href="dispenser.html" data-touch-tile>
+        <img class="archive-image" src="assets/brand-vending-city.webp" alt="Perfume vending machine somewhere">
+        <img class="product-image" src="assets/package-still.webp" alt="MY NAME IS. package">
+        <div class="tile-ui"><span>OFFLINE / NEXT</span><strong>SOMEWHERE</strong><small>FIND US ↗</small></div>
       </a>
 
-      <a class="tile tile-korea-2" href="korea.html" data-touch-tile>
-        <img class="base" src="assets/offline-poster.webp" alt="We do not sell online poster">
-        <img class="reveal-product" src="assets/korea-product.webp" alt="Korea perfume">
-        <span class="tile-number">MANIFESTO</span>
-        <span class="tile-name">KOREA</span>
-        <span class="tile-view">VIEW PLACE ↗</span>
+      <a class="archive-tile" href="seongsu.html" data-touch-tile>
+        <img class="archive-image" src="assets/brand-seongsu-02.webp" alt="Seongsu">
+        <img class="product-image" src="assets/product-seongsu.webp" alt="Seongsu perfume">
+        <div class="tile-ui"><span>003 / DETAIL</span><strong>SEONGSU</strong><small>VIEW PLACE ↗</small></div>
       </a>
 
-      <a class="tile tile-seoul-2" href="seoul.html" data-touch-tile>
-        <img class="base" src="assets/seoul-city-02.webp" alt="Seoul">
-        <img class="reveal-product" src="assets/seoul-product.webp" alt="Seoul perfume">
-        <span class="tile-number">002 / DETAIL</span>
-        <span class="tile-name">SEOUL</span>
-        <span class="tile-view">VIEW PLACE ↗</span>
+      <a class="archive-tile" href="seoul.html" data-touch-tile>
+        <img class="archive-image" src="assets/brand-seoul-02.webp" alt="Seoul">
+        <img class="product-image" src="assets/product-seoul.webp" alt="Seoul perfume">
+        <div class="tile-ui"><span>002 / DETAIL</span><strong>SEOUL</strong><small>VIEW PLACE ↗</small></div>
       </a>
 
-      <a class="tile tile-seongsu-2" href="seongsu.html" data-touch-tile>
-        <img class="base" src="assets/seongsu-city-02.webp" alt="Seongsu">
-        <img class="reveal-product" src="assets/seongsu-product.webp" alt="Seongsu perfume">
-        <span class="tile-number">003 / DETAIL</span>
-        <span class="tile-name">SEONGSU</span>
-        <span class="tile-view">VIEW PLACE ↗</span>
+      <a class="archive-tile" href="dispenser.html" data-touch-tile>
+        <img class="archive-image" src="assets/machine-seongsu.webp" alt="Seongsu perfume vending machine">
+        <img class="product-image" src="assets/package-open.webp" alt="MY NAME IS. package">
+        <div class="tile-ui"><span>OFFLINE / SEONGSU</span><strong>FIND US</strong><small>VIEW LOCATION ↗</small></div>
       </a>
     </section>
 
-    <div class="bottom-guide">
+    <footer class="archive-guide">
       <span>HOVER → PRODUCT</span>
       <span>CLICK → PLACE DETAIL</span>
-    </div>
+    </footer>
   </main>
 
-  <script src="site-v83.js?v=83"></script>
+  <script src="site-v841.js?v=841"></script>
 </body>
 </html>
