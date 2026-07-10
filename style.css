@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=DM+Serif+Display&display=swap');
 
 :root{
-  --red:#ff0000;
+  --red:#b3402c;
   --black:#000;
   --paper:#f3f1ec;
   --ink:#111;
@@ -16,6 +16,7 @@ html{
 .place,
 .city-archive,
 .dispenser,
+.find,
 .objects,
 .next,
 footer{
@@ -103,6 +104,15 @@ a{color:inherit;text-decoration:none}
   font-weight:400;
   margin:0;
 }
+.sub-slogan{
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(28px,3.6vw,52px);
+  line-height:1;
+  font-weight:400;
+  letter-spacing:-.02em;
+  color:var(--red);
+  margin:22px 0 0;
+}
 .manifesto>p{
   width:260px;
   margin:30px 0 0 auto;
@@ -113,7 +123,7 @@ a{color:inherit;text-decoration:none}
   position:absolute;
   right:-1vw;
   top:11vh;
-  color:rgba(255,0,0,.14);
+  color:rgba(179,64,44,.16);
   font-size:clamp(36px,7vw,110px);
   line-height:.9;
   letter-spacing:-.05em;
@@ -170,6 +180,77 @@ a{color:inherit;text-decoration:none}
   transition:transform 1.2s ease;
 }
 .place:hover .place-photo img{transform:scale(1.018)}
+
+.find{
+  background:#0c0c0c;
+  color:white;
+  padding:13vh 7vw 15vh;
+  border-top:1px solid #1c1c1c;
+}
+.find-copy{
+  max-width:1180px;
+  margin:0 auto 8vh;
+  display:grid;
+  grid-template-columns:180px 1fr 320px;
+  gap:5vw;
+  align-items:end;
+}
+.find-copy>span{
+  font-size:11px;
+  letter-spacing:.17em;
+}
+.find-copy h2{
+  margin:0;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(50px,5.8vw,86px);
+  line-height:.9;
+  font-weight:400;
+  letter-spacing:-.04em;
+}
+.find-copy p{
+  margin:0;
+  color:#aaa;
+  font-size:16px;
+  line-height:1.65;
+}
+.find-list{
+  max-width:1180px;
+  margin:0 auto;
+  border-top:1px solid #222;
+}
+.find-row{
+  display:grid;
+  grid-template-columns:60px 1fr auto auto;
+  gap:24px;
+  align-items:center;
+  padding:26px 4px;
+  border-bottom:1px solid #222;
+  transition:opacity .3s ease;
+}
+.find-row:hover{
+  opacity:.6;
+}
+.find-index{
+  font-size:11px;
+  letter-spacing:.14em;
+  color:#777;
+}
+.find-name{
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(24px,2.6vw,36px);
+  font-weight:400;
+}
+.find-coords{
+  font-size:13px;
+  letter-spacing:.06em;
+  color:#999;
+}
+.find-go{
+  font-size:11px;
+  letter-spacing:.12em;
+  color:var(--red);
+  white-space:nowrap;
+}
 
 .objects{
   background:var(--paper);
@@ -619,23 +700,35 @@ footer p{
   border-color:#2b2b2b;
 }
 .dark-label strong{
-  color:#ff0000;
+  color:var(--red);
 }
 
 @media (max-width:900px){
-  .topbar nav a:nth-child(3){display:none}
+  .topbar nav a:nth-child(3),
+  .topbar nav a:nth-child(4){display:none}
   .section-intro,
-  .dispenser-copy{
+  .dispenser-copy,
+  .find-copy{
     grid-template-columns:1fr;
     gap:22px;
   }
   .section-intro p,
-  .dispenser-copy p{
+  .dispenser-copy p,
+  .find-copy p{
     max-width:320px;
   }
   .city-archive,
-  .dispenser{
+  .dispenser,
+  .find{
     padding:95px 22px 110px;
+  }
+  .find-row{
+    grid-template-columns:1fr;
+    gap:6px;
+    padding:22px 2px;
+  }
+  .find-go{
+    justify-self:start;
   }
   .city-grid,
   .dispenser-grid{
