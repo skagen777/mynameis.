@@ -1093,3 +1093,237 @@ button{font:inherit}
     font-size:38px;
   }
 }
+
+
+/* =========================================================
+   V8.4.8.2 — ONLY TWO NEW WORLD-BUILDING CARDS
+   ========================================================= */
+
+/* WHY OFFLINE */
+.philosophy-page{
+  background:#d80000;
+  color:#fff;
+}
+.philosophy-header{
+  color:#fff;
+  background:rgba(155,0,0,.82);
+}
+.philosophy-hero{
+  min-height:100vh;
+  padding:94px 7vw 7vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6vw;
+  align-items:center;
+}
+.philosophy-hero figure{
+  margin:0;
+  height:76vh;
+  min-height:600px;
+}
+.philosophy-hero img{
+  object-fit:contain;
+}
+.philosophy-copy>span,
+.destination-copy>span,
+.mission-board span{
+  font-size:8px;
+  letter-spacing:.18em;
+}
+.philosophy-copy h1,
+.destination-copy h1{
+  margin:25px 0 20px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(54px,6vw,96px);
+  line-height:.86;
+  letter-spacing:-.045em;
+  font-weight:400;
+}
+.philosophy-lead{
+  margin:0 0 24px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(25px,2.4vw,38px);
+}
+.philosophy-copy p{
+  max-width:520px;
+  font-size:15px;
+  line-height:1.72;
+}
+.philosophy-copy strong{
+  display:block;
+  margin-top:34px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(29px,3vw,48px);
+  font-weight:400;
+}
+.philosophy-points{
+  padding:10vh 7vw 12vh;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  background:#080808;
+}
+.philosophy-points article{
+  min-height:250px;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  border:1px solid #252525;
+}
+.philosophy-points span{
+  color:var(--red);
+  font-size:9px;
+  letter-spacing:.16em;
+}
+.philosophy-points h2{
+  margin:auto 0 14px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:30px;
+  font-weight:400;
+}
+.philosophy-points p{
+  margin:0;
+  color:#888;
+  font-size:12px;
+  line-height:1.6;
+}
+
+/* FINAL DESTINATION */
+.destination-page{
+  background:#050505;
+  color:#fff;
+}
+.destination-page .detail-header{
+  color:#fff;
+  background:rgba(5,5,5,.86);
+}
+.destination-hero{
+  min-height:100vh;
+  padding:94px 7vw 7vh;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:6vw;
+  align-items:center;
+}
+.destination-hero figure{
+  margin:0;
+  height:78vh;
+  min-height:620px;
+  background:#000;
+}
+.destination-hero img{
+  object-fit:contain;
+}
+.destination-lead{
+  margin:0 0 24px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(21px,2vw,30px);
+  line-height:1.3;
+}
+.destination-copy p{
+  max-width:490px;
+  color:#a0a0a0;
+  font-size:15px;
+  line-height:1.72;
+}
+.mission-board{
+  padding:10vh 7vw;
+  display:grid;
+  grid-template-columns:1fr 1fr auto;
+  gap:5vw;
+  align-items:end;
+  border-top:1px solid #222;
+  background:#0c0c0c;
+}
+.mission-board p{
+  margin:15px 0 0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:26px;
+}
+.mission-board strong{
+  color:var(--red);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(30px,4vw,58px);
+  font-weight:400;
+}
+.planet-statement{
+  padding:12vh 7vw 14vh;
+  text-align:center;
+}
+.planet-statement p{
+  margin:0 0 18px;
+  color:#777;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.planet-statement h2{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(48px,7vw,110px);
+  line-height:.9;
+  font-weight:400;
+}
+
+/* Keep long card titles readable */
+.archive-tile .tile-ui strong{
+  max-width:80%;
+}
+.archive-tile[href="final-destination.html"] .tile-ui strong{
+  font-size:clamp(13px,1.25vw,21px);
+  line-height:.95;
+}
+
+@media (max-width:767px){
+  .philosophy-hero,
+  .destination-hero{
+    min-height:auto;
+    padding:calc(72px + env(safe-area-inset-top)) 16px 42px;
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+  .philosophy-hero figure,
+  .destination-hero figure{
+    height:auto;
+    min-height:0;
+    aspect-ratio:3/4;
+  }
+  .philosophy-copy h1,
+  .destination-copy h1{
+    font-size:clamp(45px,14vw,63px);
+  }
+  .philosophy-copy p,
+  .destination-copy p{
+    font-size:13px;
+    line-height:1.65;
+  }
+  .philosophy-points{
+    padding:64px 16px 72px;
+    grid-template-columns:1fr;
+  }
+  .philosophy-points article{
+    min-height:185px;
+  }
+  .mission-board{
+    padding:64px 16px 72px;
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+  .mission-board strong{
+    font-size:40px;
+  }
+  .planet-statement{
+    padding:80px 16px 95px;
+  }
+  .planet-statement h2{
+    font-size:clamp(43px,12vw,62px);
+  }
+  .archive-tile[href="final-destination.html"] .tile-ui strong{
+    font-size:8px;
+    line-height:.95;
+    max-width:92%;
+  }
+  .archive-tile[href="manifesto.html"] .tile-ui strong{
+    font-size:9px;
+  }
+}

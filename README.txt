@@ -1,16 +1,23 @@
-MY NAME IS. V8.4.7 NAVER VERIFIED
+MY NAME IS. V8.4.8.2 — TWO CARDS ONLY
 
-추가 사항
-- index.html <head> 안에 네이버 사이트 소유확인 태그 삽입
-- robots.txt 포함
-- sitemap.xml 포함
+이번 버전은 기존 홈페이지를 유지하고 메인 중복 카드 두 칸만 수정했습니다.
 
-네이버 인증 태그
-<meta name="naver-site-verification" content="9c742c9db7e0a92c33dd3d7673675855af760a5c" />
+변경한 두 칸
+1. WHY OFFLINE?
+   - 브랜드 철학 상세페이지 manifesto.html
+   - We don't collect fragrances. We collect places.
 
-적용 방법
-1. ZIP 압축을 풉니다.
-2. GitHub에 assets 폴더를 포함한 전체 파일을 업로드합니다.
-3. Commit changes 후 2~5분 기다립니다.
-4. view-source:https://my-nameis.com/ 을 열고 naver-site-verification을 검색합니다.
-5. 태그가 보이면 네이버 서치어드바이저에서 소유확인을 누릅니다.
+2. OUR FINAL DESTINATION
+   - 업로드한 우주 자판기 이미지 사용
+   - final-destination.html
+   - Every town has a smell. Maybe every planet does too.
+
+건드리지 않은 부분
+- 기존 KOREA / SEOUL / SEONGSU 페이지
+- DISPENSER / SOMEWHERE / FIND US 구조
+- 첫 포스터 화면
+- 3×3 배열과 기존 스타일
+- 네이버 인증 태그
+- robots.txt / sitemap.xml
+
+캐시 버전: v=8482
