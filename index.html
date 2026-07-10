@@ -1,75 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MY NAME IS. | Every town has a smell.</title>
+  <title>MY NAME IS. | Every town has a smell.</title>
+  <meta name="description" content="도시와 지역의 기억을 향으로 기록하는 대한민국 로컬 퍼퓸 브랜드 MY NAME IS.">
+  <meta name="keywords" content="MY NAME IS, 마이네임이즈, 향수, 로컬 향수, 서울 향수, 성수 향수, 한국 향수">
+  <meta name="author" content="MY NAME IS.">
+  <meta name="robots" content="index,follow">
 
-<meta name="description" content="Every town has a smell. Offline perfume brand.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MY NAME IS. | Every town has a smell.">
+  <meta property="og:description" content="도시와 지역의 기억을 향으로 기록하는 대한민국 로컬 퍼퓸 브랜드">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+  <meta property="og:image" content="https://YOUR-DOMAIN.com/og-image.jpg">
 
-<style>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#e60012">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:#f5f3ef;
-font-family:Helvetica,Arial,sans-serif;
-color:#111;
-}
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:40px;
-}
-
-h1{
-font-size:72px;
-letter-spacing:-3px;
-margin-bottom:20px;
-}
-
-h2{
-font-size:28px;
-font-weight:300;
-}
-
-.scroll{
-position:absolute;
-bottom:40px;
-font-size:14px;
-letter-spacing:2px;
-}
-
-</style>
-
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MY NAME IS. 홈">my name is.</a>
 
-<section class="hero">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      menu
+    </button>
 
-<h1>MY NAME IS.</h1>
+    <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
+      <a href="#story">story</a>
+      <a href="#collection">collection</a>
+      <a href="#offline">offline only</a>
+      <a href="https://www.instagram.com/mynameis_offcial/" target="_blank" rel="noopener">instagram</a>
+    </nav>
+  </header>
 
-<h2>Every town has a smell.</h2>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
 
-<div class="scroll">
+      <div class="hero-copy">
+        <p class="eyebrow">LOCAL PERFUME FROM KOREA</p>
+        <h1>
+          Every town<br>
+          has a smell.
+        </h1>
+        <p class="hero-sub">
+          도시와 지역의 기억을 향으로 기록합니다.
+        </p>
+      </div>
 
-SCROLL ↓
+      <div class="hero-mark" aria-hidden="true">
+        <span>37.5665° N</span>
+        <span>126.9780° E</span>
+      </div>
 
-</div>
+      <a class="scroll-cue" href="#story">scroll ↓</a>
+    </section>
 
-</section>
+    <section id="story" class="story section">
+      <div class="section-label">01 — STORY</div>
 
+      <div class="story-layout">
+        <h2>향은 장소를<br>기억하게 합니다.</h2>
+
+        <div class="story-copy">
+          <p>
+            MY NAME IS.는 도시의 온도, 골목의 표정, 계절의 공기와 사람의 기억을
+            향으로 번역하는 로컬 퍼퓸 브랜드입니다.
+          </p>
+          <p>
+            하나의 향은 하나의 지역에서 시작됩니다. 각 컬렉션은 그 장소가 가진
+            고유한 분위기와 시간의 층위를 담아냅니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="collection" class="collection section">
+      <div class="section-label">02 — COLLECTION</div>
+
+      <article class="product product-korea">
+        <div class="product-visual">
+          <div class="bottle">
+            <span class="bottle-name">korea</span>
+            <span class="bottle-coord">36.6384° N / 127.6961° E</span>
+          </div>
+        </div>
+
+        <div class="product-copy">
+          <p class="product-index">01</p>
+          <h3>korea</h3>
+          <p class="product-line">Where City Nights Meet Mountain Breath.</p>
+          <p class="product-desc">
+            도시의 밤 위로 산의 숨결이 겹쳐집니다.
+            서로 나뉘지 않은 채 하나의 풍경으로 남습니다.
+          </p>
+          <dl class="notes">
+            <div><dt>TOP</dt><dd>Grapefruit · Lemon · Pink Pepper</dd></div>
+            <div><dt>MIDDLE</dt><dd>Tuberose · Orris · Mango · Coconut</dd></div>
+            <div><dt>BASE</dt><dd>Cedarwood · Vetiver · Tonka Bean · Musk · Vanilla</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="product product-seoul">
+        <div class="product-visual">
+          <div class="bottle">
+            <span class="bottle-name">seoul</span>
+            <span class="bottle-coord">37.5665° N / 126.9780° E</span>
+          </div>
+        </div>
+
+        <div class="product-copy">
+          <p class="product-index">02</p>
+          <h3>seoul</h3>
+          <p class="product-line">Cold at First, Warm as It Lingers.</p>
+          <p class="product-desc">
+            멀리서는 차갑지만 가까워질수록 따스함이 조용히 펼쳐집니다.
+          </p>
+          <dl class="notes">
+            <div><dt>TOP</dt><dd>Musk · Aldehyde</dd></div>
+            <div><dt>MIDDLE</dt><dd>Musk · Rose · Violet · Muguet · Jasmine</dd></div>
+            <div><dt>BASE</dt><dd>Musk · Sandalwood · Tonka Bean · Moss · Vanilla</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="product product-seongsu">
+        <div class="product-visual">
+          <div class="bottle">
+            <span class="bottle-name">seongsu</span>
+            <span class="bottle-coord">37.5446° N / 127.0559° E</span>
+          </div>
+        </div>
+
+        <div class="product-copy">
+          <p class="product-index">03</p>
+          <h3>seongsu</h3>
+          <p class="product-line">Flowers in Bloom on Brick.</p>
+          <p class="product-desc">
+            거친 벽돌 위로 꽃이 조용히 피어납니다.
+            그 피어남은 공간을 새롭게 바꾸고 천천히 스며듭니다.
+          </p>
+          <dl class="notes">
+            <div><dt>MOOD</dt><dd>Floral · Clean · Urban</dd></div>
+            <div><dt>PLACE</dt><dd>Seongsu, Seoul</dd></div>
+          </dl>
+        </div>
+      </article>
+    </section>
+
+    <section id="offline" class="offline">
+      <div class="offline-inner">
+        <p class="eyebrow">OFFLINE ONLY</p>
+        <h2>
+          We do not sell online.<br>
+          Because fragrance only exists offline.
+        </h2>
+        <p>
+          MY NAME IS.는 향을 직접 경험할 수 있는 오프라인 공간과
+          PARFUM DISPENSER를 통해서만 판매합니다.
+        </p>
+        <a class="button" href="https://www.instagram.com/mynameis_offcial/" target="_blank" rel="noopener">
+          Find us on Instagram
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>my name is.</strong>
+      <p>Every town has a smell.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://www.instagram.com/mynameis_offcial/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:hello@YOUR-DOMAIN.com">Email</a>
+    </div>
+
+    <p class="copyright">© <span id="year"></span> MY NAME IS.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

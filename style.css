@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap');
+
+:root {
+  --red: #e60012;
+  --black: #111111;
+  --ivory: #f3efe7;
+  --paper: #faf8f3;
+  --line: rgba(17,17,17,.18);
+  --muted: #6b6861;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--black);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 34px;
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+.brand {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.site-nav {
+  display: flex;
+  gap: 28px;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--red);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 110px 7vw 70px;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(255,255,255,.13) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.13) 1px, transparent 1px);
+  background-size: 9vw 9vw;
+  opacity: .35;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+}
+
+.eyebrow {
+  margin: 0 0 26px;
+  font-size: .72rem;
+  letter-spacing: .18em;
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(4.5rem, 11vw, 11rem);
+  line-height: .86;
+  letter-spacing: -.055em;
+}
+
+.hero-sub {
+  margin-top: 34px;
+  font-size: clamp(1rem, 1.7vw, 1.4rem);
+}
+
+.hero-mark {
+  position: absolute;
+  right: 5vw;
+  bottom: 70px;
+  display: grid;
+  gap: 4px;
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-align: right;
+}
+
+.scroll-cue {
+  position: absolute;
+  left: 34px;
+  bottom: 26px;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.section {
+  padding: 110px 6vw;
+}
+
+.section-label {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  font-size: .72rem;
+  letter-spacing: .16em;
+}
+
+.story {
+  background: var(--ivory);
+}
+
+.story-layout {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 8vw;
+  align-items: start;
+  padding-top: 80px;
+}
+
+.story h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3rem, 6vw, 7rem);
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+
+.story-copy {
+  max-width: 620px;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+}
+
+.story-copy p {
+  margin: 0 0 26px;
+}
+
+.collection {
+  padding-bottom: 0;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 90vh;
+  border-bottom: 1px solid var(--line);
+}
+
+.product-visual {
+  min-height: 680px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-korea .product-visual {
+  background:
+    radial-gradient(circle at 70% 30%, rgba(230,0,18,.8), transparent 28%),
+    linear-gradient(135deg, #1a1a1a, #323232 55%, #121212);
+}
+
+.product-seoul .product-visual {
+  background:
+    radial-gradient(circle at 50% 10%, rgba(255,255,255,.9), transparent 32%),
+    linear-gradient(140deg, #d9d6cf, #f4f0e8 55%, #bdb8ae);
+}
+
+.product-seongsu .product-visual {
+  background:
+    linear-gradient(rgba(150,35,23,.2), rgba(150,35,23,.2)),
+    repeating-linear-gradient(0deg, #9a3c2f 0 38px, #783026 38px 42px),
+    repeating-linear-gradient(90deg, transparent 0 78px, rgba(65,20,15,.4) 78px 82px);
+}
+
+.bottle {
+  width: min(38vw, 310px);
+  aspect-ratio: .78;
+  background: linear-gradient(145deg, rgba(20,20,20,.98), rgba(56,56,56,.97));
+  border-radius: 24px 24px 12px 12px;
+  box-shadow: 0 28px 70px rgba(0,0,0,.35);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 34px;
+  color: var(--red);
+}
+
+.bottle::before {
+  content: "";
+  position: absolute;
+  width: 42%;
+  height: 23%;
+  left: 29%;
+  top: -21%;
+  background: #090909;
+  border-radius: 12px 12px 5px 5px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.05);
+}
+
+.bottle-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.bottle-coord {
+  margin-top: 14px;
+  font-size: .62rem;
+  letter-spacing: .08em;
+}
+
+.product-copy {
+  padding: 90px 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-index {
+  margin: 0 0 34px;
+  font-size: .75rem;
+  letter-spacing: .12em;
+}
+
+.product h3 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: .9;
+  letter-spacing: -.05em;
+}
+
+.product-line {
+  margin: 30px 0 16px;
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-weight: 500;
+}
+
+.product-desc {
+  max-width: 540px;
+  color: var(--muted);
+}
+
+.notes {
+  margin: 42px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.notes div {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.notes dt {
+  font-size: .7rem;
+  letter-spacing: .12em;
+}
+
+.notes dd {
+  margin: 0;
+  font-size: .86rem;
+}
+
+.offline {
+  background: var(--black);
+  color: #fff;
+  min-height: 82vh;
+  padding: 120px 6vw;
+  display: flex;
+  align-items: center;
+}
+
+.offline-inner {
+  max-width: 1100px;
+}
+
+.offline h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.2rem, 7vw, 8rem);
+  line-height: .96;
+  letter-spacing: -.045em;
+}
+
+.offline-inner > p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 34px 0;
+  color: rgba(255,255,255,.68);
+  font-size: 1.05rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 26px;
+  background: var(--red);
+  color: #fff;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.site-footer {
+  padding: 46px 6vw;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  background: var(--ivory);
+  border-top: 1px solid var(--line);
+}
+
+.site-footer strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.7rem;
+}
+
+.site-footer p {
+  margin: 5px 0 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  align-items: start;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.copyright {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: .72rem;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    padding: 18px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: fixed;
+    inset: 0;
+    background: var(--black);
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    font-size: 1.2rem;
+    mix-blend-mode: normal;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .hero {
+    padding-inline: 24px;
+  }
+
+  .hero-mark {
+    right: 24px;
+  }
+
+  .scroll-cue {
+    left: 24px;
+  }
+
+  .section {
+    padding: 84px 24px;
+  }
+
+  .story-layout,
+  .product {
+    grid-template-columns: 1fr;
+  }
+
+  .story-layout {
+    gap: 48px;
+    padding-top: 54px;
+  }
+
+  .product {
+    min-height: auto;
+  }
+
+  .product-visual {
+    min-height: 560px;
+  }
+
+  .product-copy {
+    padding: 70px 24px 90px;
+  }
+
+  .offline {
+    padding: 90px 24px;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: 4.2rem;
+  }
+
+  .product-visual {
+    min-height: 470px;
+  }
+
+  .bottle {
+    width: 230px;
+    padding: 26px;
+  }
+
+  .notes div {
+    grid-template-columns: 78px 1fr;
+  }
+}
