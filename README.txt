@@ -1,12 +1,14 @@
-MY NAME IS. V8.4.5 DIRECT MAP
+MY NAME IS. V8.4.6 LINKS CORRECTED
 
-변경 사항
-- 메인 화면의 FIND US / DISPENSER 관련 타일을 누르면 Google Maps로 바로 이동
-- SEONGSU 상세페이지 하단 FIND US도 Google Maps로 바로 이동
-- 별도의 자판기 상세페이지를 거치지 않음
-- 지도는 새 탭에서 열림
-- dispenser.html 파일은 보관용으로 그대로 유지
-- 캐시 버전 v=845
+링크 역할
+- DISPENSER → dispenser.html
+  퍼퓸 벤딩머신 개념과 오프라인 판매 방식 설명
+- SOMEWHERE → somewhere.html
+  다음 도시 확장, 당신의 도시와 고향이 다음이 될 수 있다는 설명
+- FIND US → Google Maps
+  서울 성동구 성수동2가 322-1 자판기 위치
+- SEONGSU 상세페이지 하단 FIND US → Google Maps
 
-Google Maps 목적지
-서울 성동구 성수동2가 322-1
+추가
+- SOMEWHERE 신규 상세페이지
+- 캐시 버전 v=846
