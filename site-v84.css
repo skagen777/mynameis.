@@ -1327,3 +1327,76 @@ button{font:inherit}
     font-size:9px;
   }
 }
+
+
+/* =========================================================
+   V8.4.9 — CLICKABLE PRICE, FIND US UNCHANGED
+   ========================================================= */
+
+.product-purchase-meta{
+  margin-top:22px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:11px;
+}
+
+.price-map-link{
+  position:relative;
+  display:inline-block;
+  color:inherit;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(24px,2.2vw,34px);
+  line-height:1;
+  letter-spacing:-.02em;
+  transition:color .28s ease,transform .28s ease;
+}
+
+.price-map-link::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-7px;
+  height:1px;
+  background:currentColor;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .28s ease;
+}
+
+.price-map-link:hover{
+  color:var(--red);
+  transform:translateX(3px);
+}
+
+.price-map-link:hover::after{
+  transform:scaleX(1);
+}
+
+.product-purchase-meta p{
+  margin:2px 0 0;
+  color:#777;
+  font-size:10px;
+  line-height:1.55;
+  letter-spacing:.03em;
+}
+
+.detail-dark .product-purchase-meta p{
+  color:#8d8d8d;
+}
+
+@media (max-width:767px){
+  .product-purchase-meta{
+    margin-top:18px;
+    gap:10px;
+  }
+
+  .price-map-link{
+    font-size:clamp(25px,8vw,33px);
+  }
+
+  .product-purchase-meta p{
+    font-size:9px;
+  }
+}
