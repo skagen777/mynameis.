@@ -675,3 +675,51 @@ button{font:inherit}
   .archive-logo p{font-size:14px}
   .tile-ui strong{font-size:17px}
 }
+
+
+/* =========================================================
+   V8.4.2 — DESKTOP FULL IMAGE FIT
+   ========================================================= */
+@media (min-width:768px){
+  .archive-tile{
+    background:#0a0a0a;
+  }
+
+  .archive-image{
+    object-fit:contain !important;
+    object-position:center !important;
+    background:#0a0a0a;
+    padding:3px;
+  }
+
+  .archive-tile::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    background:
+      radial-gradient(circle at center,rgba(255,255,255,.035),transparent 68%),
+      #080808;
+    pointer-events:none;
+  }
+
+  .archive-tile:hover .archive-image{
+    transform:scale(1.025);
+    filter:blur(2px) brightness(.68);
+  }
+
+  .archive-tile:hover .product-image{
+    transform:scale(.96);
+  }
+
+  .brand-poster-section img,
+  .product-hero img,
+  .dispenser-hero img{
+    object-fit:contain !important;
+  }
+
+  .photo-wall img{
+    object-fit:contain;
+    background:#111;
+  }
+}
