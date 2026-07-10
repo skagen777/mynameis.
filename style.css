@@ -45,13 +45,14 @@ a{color:inherit;text-decoration:none}
   color:white;
 }
 .top-logo{
-  width:62px;
-  height:82px;
-  overflow:hidden;
+  width:84px;
+  height:auto;
+  display:block;
 }
 .top-logo img{
-  object-fit:cover;
-  object-position:left center;
+  width:100%;
+  height:auto;
+  display:block;
 }
 .topbar nav{
   display:flex;
