@@ -11,144 +11,127 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
-const productOrder = ['korea', 'seoul', 'seongsu'];
-const cards = [...document.querySelectorAll('.product-card')];
-const carousel = document.getElementById('productCarousel');
-const counter = document.getElementById('currentIndex');
-const prevButton = document.querySelector('.gallery-prev');
-const nextButton = document.querySelector('.gallery-next');
-const detail = document.getElementById('productDetail');
-const closeButton = document.querySelector('.detail-close');
-const detailPanels = [...document.querySelectorAll('.detail-panel')];
+const cards = Array.from(document.querySelectorAll('.showcase-card'));
+const currentLabel = document.getElementById('showcaseCurrent');
+const gallery = document.getElementById('showcaseGallery');
+const modal = document.getElementById('placeModal');
+const modalPlaces = Array.from(document.querySelectorAll('.modal-place'));
+const prevButton = document.querySelector('.showcase-prev');
+const nextButton = document.querySelector('.showcase-next');
 
 let activeIndex = 0;
-let autoTimer = null;
-let pointerStartX = null;
-let wheelLocked = false;
+let autoRotate = null;
+let dragStart = null;
+let wheelLock = false;
 
-function circularDistance(index, active) {
-  const total = productOrder.length;
-  const forward = (index - active + total) % total;
-  const backward = (active - index + total) % total;
-  if (forward === 0) return 'center';
-  if (forward <= backward) return 'right';
-  return 'left';
-}
-
-function renderCarousel() {
+function renderShowcase() {
   cards.forEach((card, index) => {
-    const position = circularDistance(index, activeIndex);
-    card.dataset.position = position;
-    card.setAttribute('aria-current', position === 'center' ? 'true' : 'false');
+    let state = 'next';
+    if (index === activeIndex) state = 'active';
+    else if (index === (activeIndex - 1 + cards.length) % cards.length) state = 'prev';
+    card.dataset.state = state;
+    card.setAttribute('aria-current', state === 'active' ? 'true' : 'false');
   });
-  counter.textContent = String(activeIndex + 1).padStart(2, '0');
+  currentLabel.textContent = String(activeIndex + 1).padStart(2, '0');
 }
 
-function goTo(index, userInitiated = true) {
-  activeIndex = (index + productOrder.length) % productOrder.length;
-  renderCarousel();
-  if (userInitiated) restartAutoRotate();
+function selectIndex(index, restart = true) {
+  activeIndex = (index + cards.length) % cards.length;
+  renderShowcase();
+  if (restart) restartAuto();
 }
 
-function next() {
-  goTo(activeIndex + 1);
+function showNext() {
+  selectIndex(activeIndex + 1);
 }
 
-function prev() {
-  goTo(activeIndex - 1);
+function showPrev() {
+  selectIndex(activeIndex - 1);
 }
 
-function openDetail(product) {
-  detailPanels.forEach((panel) => {
-    panel.classList.toggle('active', panel.dataset.detail === product);
+function openModal(product) {
+  modalPlaces.forEach((place) => {
+    place.classList.toggle('is-active', place.dataset.modalProduct === product);
   });
-  detail.classList.add('open');
-  detail.setAttribute('aria-hidden', 'false');
-  document.body.classList.add('detail-open');
-  stopAutoRotate();
-  detail.scrollTop = 0;
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  stopAuto();
+  const dialog = modal.querySelector('.place-modal-dialog');
+  dialog.scrollTop = 0;
 }
 
-function closeDetail() {
-  detail.classList.remove('open');
-  detail.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('detail-open');
-  restartAutoRotate();
+function closeModal() {
+  modal.classList.remove('is-open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  restartAuto();
 }
 
-function startAutoRotate() {
-  stopAutoRotate();
-  autoTimer = window.setInterval(() => {
-    activeIndex = (activeIndex + 1) % productOrder.length;
-    renderCarousel();
-  }, 4300);
+function stopAuto() {
+  if (autoRotate) clearInterval(autoRotate);
+  autoRotate = null;
 }
 
-function stopAutoRotate() {
-  if (autoTimer) window.clearInterval(autoTimer);
-  autoTimer = null;
-}
-
-function restartAutoRotate() {
-  startAutoRotate();
+function restartAuto() {
+  stopAuto();
+  autoRotate = setInterval(() => {
+    activeIndex = (activeIndex + 1) % cards.length;
+    renderShowcase();
+  }, 4500);
 }
 
 cards.forEach((card, index) => {
   card.addEventListener('click', () => {
     if (index !== activeIndex) {
-      goTo(index);
+      selectIndex(index);
       return;
     }
-    openDetail(card.dataset.product);
+    openModal(card.dataset.product);
   });
 });
 
-prevButton.addEventListener('click', prev);
-nextButton.addEventListener('click', next);
-closeButton.addEventListener('click', closeDetail);
+prevButton.addEventListener('click', showPrev);
+nextButton.addEventListener('click', showNext);
 
-detail.addEventListener('click', (event) => {
-  if (event.target === detail) closeDetail();
+document.querySelectorAll('[data-close-modal]').forEach((button) => {
+  button.addEventListener('click', closeModal);
 });
 
 document.addEventListener('keydown', (event) => {
-  if (detail.classList.contains('open')) {
-    if (event.key === 'Escape') closeDetail();
+  if (modal.classList.contains('is-open')) {
+    if (event.key === 'Escape') closeModal();
     return;
   }
-  if (event.key === 'ArrowRight') next();
-  if (event.key === 'ArrowLeft') prev();
-  if (event.key === 'Enter') openDetail(productOrder[activeIndex]);
+  if (event.key === 'ArrowLeft') showPrev();
+  if (event.key === 'ArrowRight') showNext();
 });
 
-carousel.addEventListener('wheel', (event) => {
-  if (wheelLocked) return;
-  if (Math.abs(event.deltaY) < 12 && Math.abs(event.deltaX) < 12) return;
-  wheelLocked = true;
-  if (event.deltaY > 0 || event.deltaX > 0) next();
-  else prev();
-  window.setTimeout(() => { wheelLocked = false; }, 650);
+gallery.addEventListener('mouseenter', stopAuto);
+gallery.addEventListener('mouseleave', restartAuto);
+
+gallery.addEventListener('wheel', (event) => {
+  if (wheelLock || Math.abs(event.deltaY) < 16) return;
+  wheelLock = true;
+  if (event.deltaY > 0) showNext();
+  else showPrev();
+  setTimeout(() => { wheelLock = false; }, 650);
 }, { passive: true });
 
-carousel.addEventListener('pointerdown', (event) => {
-  pointerStartX = event.clientX;
-  carousel.setPointerCapture(event.pointerId);
+gallery.addEventListener('pointerdown', (event) => {
+  dragStart = event.clientX;
+  gallery.setPointerCapture(event.pointerId);
 });
 
-carousel.addEventListener('pointerup', (event) => {
-  if (pointerStartX === null) return;
-  const distance = event.clientX - pointerStartX;
+gallery.addEventListener('pointerup', (event) => {
+  if (dragStart === null) return;
+  const distance = event.clientX - dragStart;
   if (Math.abs(distance) > 45) {
-    if (distance < 0) next();
-    else prev();
+    if (distance < 0) showNext();
+    else showPrev();
   }
-  pointerStartX = null;
+  dragStart = null;
 });
 
-carousel.addEventListener('mouseenter', stopAutoRotate);
-carousel.addEventListener('mouseleave', startAutoRotate);
-carousel.addEventListener('focusin', stopAutoRotate);
-carousel.addEventListener('focusout', startAutoRotate);
-
-renderCarousel();
-startAutoRotate();
+renderShowcase();
+restartAuto();

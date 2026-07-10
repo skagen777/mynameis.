@@ -1,15 +1,19 @@
-MY NAME IS. V7.5 INTERACTIVE
+MY NAME IS. V7.5.1 FIXED
 
-적용 방법
-1. ZIP을 압축 해제합니다.
-2. GitHub 저장소의 index.html, style.css, script.js를 교체합니다.
-3. 기존 assets 폴더는 그대로 둡니다.
-4. Commit changes 후 배포를 기다립니다.
+이 버전은 현재 정상 사이트 구조를 유지하고 첫 화면만 수정했습니다.
 
-주요 기능
-- Korea / Seoul / Seongsu 제품 카드 자동 회전
-- 화살표, 마우스 휠, 드래그, 키보드 방향키 지원
-- 중앙 제품 클릭 시 전체 화면 제품 설명 열림
-- 향 노트와 도시 사진 3장이 순차적으로 등장
-- ESC 또는 CLOSE 버튼으로 닫기
-- 기존 길었던 개별 제품 섹션 제거
+교체 파일
+- index.html
+- style.css
+- script.js
+
+유지 파일
+- assets 폴더 전체
+- CNAME 및 기타 파일
+
+기능
+- 제품 3종 자동 회전
+- 화살표 / 드래그 / 마우스 휠 전환
+- 중앙 제품 클릭 시 제품 설명과 도시 사진 팝업
+- ESC 또는 CLOSE로 닫기
+- 기존 하단 KOREA / SEOUL / SEONGSU / FIND US / OBJECTS 섹션 유지
