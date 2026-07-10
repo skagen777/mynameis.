@@ -4,362 +4,88 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>MY NAME IS. — Every town has a smell.</title>
-  <meta name="description" content="장소가 자신의 이름을 향으로 소개합니다. MY NAME IS.">
-  <meta name="robots" content="index,follow">
+  <meta name="description" content="장소가 자신의 이름을 향으로 소개합니다.">
   <link rel="canonical" href="https://my-nameis.com/">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="MY NAME IS.">
-  <meta property="og:description" content="Every fragrance is a place introducing itself.">
-  <meta property="og:url" content="https://my-nameis.com/">
-  <meta property="og:image" content="https://my-nameis.com/assets/all-products.webp">
-
   <meta name="theme-color" content="#000000">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="topbar">
-    <a class="top-logo" href="#home" aria-label="홈">
+<body class="home-page">
+  <header class="site-header">
+    <a class="header-mark" href="index.html" aria-label="MY NAME IS. 홈">
       <img src="assets/brand-logo.png" alt="my name is.">
     </a>
     <nav>
-      <a href="#places">COLLECTION</a>
-      <a href="#find">FIND US</a>
-      <a href="#next">YOUR TOWN</a>
-      <a href="https://www.instagram.com/mynameis_offcial/" target="_blank" rel="noopener" class="ig-link" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18" rx="5"/>
-          <circle cx="12" cy="12" r="4.2"/>
-          <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/>
-        </svg>
-      </a>
+      <a href="korea.html">KOREA</a>
+      <a href="seoul.html">SEOUL</a>
+      <a href="seongsu.html">SEONGSU</a>
+      <a href="dispenser.html">FIND US</a>
+      <a href="https://www.instagram.com/mynameis_offcial/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
     </nav>
   </header>
 
-  <main>
-    <section id="home" class="hero-showcase">
-      <div class="hero-showcase-copy">
-        <div class="hero-showcase-kicker">AN INTRODUCTION THROUGH FRAGRANCE</div>
-        <img class="hero-showcase-logo" src="assets/brand-logo.png" alt="my name is.">
-        <h1>Every town<br>has a smell.</h1>
-        <p class="hero-showcase-red">We don&rsquo;t sell online.</p>
-        <p class="hero-showcase-description">
-          Choose a place.<br>
-          Let the fragrance introduce itself.
-        </p>
-
-        <div class="hero-showcase-controls">
-          <button type="button" class="showcase-arrow showcase-prev" aria-label="이전 제품">←</button>
-          <span class="showcase-count"><b id="showcaseCurrent">01</b> / 03</span>
-          <button type="button" class="showcase-arrow showcase-next" aria-label="다음 제품">→</button>
-        </div>
-      </div>
-
-      <div class="showcase-gallery" id="showcaseGallery">
-        <button class="showcase-card" type="button" data-product="korea">
-          <span class="showcase-no">001</span>
-          <span class="showcase-image"><img src="assets/korea.webp" alt="Korea 향수"></span>
-          <span class="showcase-name">KOREA</span>
-          <span class="showcase-enter">VIEW PLACE ↗</span>
-        </button>
-
-        <button class="showcase-card" type="button" data-product="seoul">
-          <span class="showcase-no">002</span>
-          <span class="showcase-image"><img src="assets/seoul.webp" alt="Seoul 향수"></span>
-          <span class="showcase-name">SEOUL</span>
-          <span class="showcase-enter">VIEW PLACE ↗</span>
-        </button>
-
-        <button class="showcase-card" type="button" data-product="seongsu">
-          <span class="showcase-no">003</span>
-          <span class="showcase-image"><img src="assets/seongsu.webp" alt="Seongsu 향수"></span>
-          <span class="showcase-name">SEONGSU</span>
-          <span class="showcase-enter">VIEW PLACE ↗</span>
-        </button>
-
-        <p class="showcase-hint">AUTO ROTATE · DRAG · CLICK</p>
-      </div>
-    </section>
-
-    <div class="place-modal" id="placeModal" aria-hidden="true">
-      <div class="place-modal-backdrop" data-close-modal></div>
-      <div class="place-modal-dialog" role="dialog" aria-modal="true" aria-label="제품 상세">
-        <button class="place-modal-close" type="button" data-close-modal>CLOSE ×</button>
-
-        <article class="modal-place" data-modal-product="korea">
-          <div class="modal-place-copy">
-            <span class="modal-index">001 / KOREA</span>
-            <p class="modal-hello">HELLO.</p>
-            <h2>MY NAME IS<br><em>KOREA.</em></h2>
-            <p class="modal-voice">I am surrounded by mountains,<br>touched by three seas,<br>remembered through four seasons.</p>
-            <div class="modal-notes">
-              <p><span>TOP</span>Grapefruit, Lemon, Pink Pepper</p>
-              <p><span>MIDDLE</span>Tuberose, Orris, Mango, Coconut</p>
-              <p><span>BASE</span>Cedarwood, Vetiver, Tonka Bean, Musk, Vanilla</p>
-            </div>
-            <small>EAU DE PARFUM · 30ML</small>
-          </div>
-          <div class="modal-city-grid">
-            <figure class="modal-city-main"><img src="assets/city-korea-03.webp" alt="Korea city archive"></figure>
-            <figure><img src="assets/city-korea-05.webp" alt="Korea palace corridor"></figure>
-            <figure><img src="assets/city-korea-06.webp" alt="Korea mountain and roofline"></figure>
-          </div>
-        </article>
-
-        <article class="modal-place" data-modal-product="seoul">
-          <div class="modal-place-copy">
-            <span class="modal-index">002 / SEOUL</span>
-            <p class="modal-hello">HELLO.</p>
-            <h2>MY NAME IS<br><em>SEOUL.</em></h2>
-            <p class="modal-voice">Cold from afar.<br>Warm when you stay.</p>
-            <div class="modal-notes">
-              <p><span>TOP</span>Musk, Aldehyde</p>
-              <p><span>MIDDLE</span>Musk, Rose, Violet, Muguet, Jasmine</p>
-              <p><span>BASE</span>Musk, Sandalwood, Tonka Bean, Moss, Vanilla</p>
-            </div>
-            <small>EAU DE PARFUM · 30ML</small>
-          </div>
-          <div class="modal-city-grid">
-            <figure class="modal-city-main"><img src="assets/city-seoul-11.webp" alt="Seoul city archive"></figure>
-            <figure><img src="assets/city-seoul-09.webp" alt="Seoul fortress wall"></figure>
-            <figure><img src="assets/city-seoul-08.webp" alt="Seoul Han River at night"></figure>
-          </div>
-        </article>
-
-        <article class="modal-place" data-modal-product="seongsu">
-          <div class="modal-place-copy">
-            <span class="modal-index">003 / SEONGSU</span>
-            <p class="modal-hello">HELLO.</p>
-            <h2>MY NAME IS<br><em>SEONGSU.</em></h2>
-            <p class="modal-voice">I keep changing.<br>But I never forget<br>where I began.</p>
-            <div class="modal-notes">
-              <p><span>TOP</span>Ambrette, Sapodilla, Pink Pepper</p>
-              <p><span>MIDDLE</span>Rose, Magnolia, Sandalwood</p>
-              <p><span>BASE</span>Ambergris, Cedarwood, Musk</p>
-            </div>
-            <small>EAU DE PARFUM · 30ML</small>
-          </div>
-          <div class="modal-city-grid">
-            <figure class="modal-city-main"><img src="assets/city-seongsu-08.webp" alt="Seongsu city archive"></figure>
-            <figure><img src="assets/city-seongsu-05.webp" alt="Seongsu walkway"></figure>
-            <figure><img src="assets/city-seongsu-03.webp" alt="Seongsu rooftops"></figure>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <section id="places" class="place place-korea">
-      <div class="running-head">
-        <span>MY NAME IS.</span>
-        <span>PLACE 01 OF 03 — KOREA</span>
-      </div>
-      <div class="place-text reveal">
-        <span>001</span>
-        <p class="hello">HELLO.</p>
-        <h2>MY NAME IS<br><em>KOREA.</em></h2>
-        <p class="voice">
-          I am surrounded by mountains,<br>
-          touched by three seas,<br>
-          remembered through four seasons.
-        </p>
-        <div class="notes">
-          <div class="notes-row"><span class="notes-label">TOP</span><span class="notes-value">Grapefruit, Lemon, Pink Pepper</span></div>
-          <div class="notes-row"><span class="notes-label">MIDDLE</span><span class="notes-value">Tuberose, Orris, Mango, Coconut</span></div>
-          <div class="notes-row"><span class="notes-label">BASE</span><span class="notes-value">Cedarwood, Vetiver, Tonka Bean, Musk, Vanilla</span></div>
-        </div>
-        <div class="meta">EAU DE PARFUM · 30ML</div>
-      </div>
-      <div class="place-photo reveal">
-        <img src="assets/korea.webp" alt="Korea 향수 제품">
-      </div>
-      <div class="plate-grid reveal">
-        <figure class="plate plate-large">
-          <img src="assets/city-korea-03.webp" alt="Korean palace complex at dusk">
-          <figcaption><span class="plate-no">PLATE 01</span><span class="plate-caption">A palace at the hour the city forgets its name.</span></figcaption>
-        </figure>
-        <figure class="plate">
-          <img src="assets/city-korea-05.webp" alt="Palace colonnade corridor">
-          <figcaption><span class="plate-no">PLATE 02</span><span class="plate-caption">Colonnade, Gyeongbokgung.</span></figcaption>
-        </figure>
-        <figure class="plate">
-          <img src="assets/city-korea-06.webp" alt="Palace roof with cherry blossoms and mountain">
-          <figcaption><span class="plate-no">PLATE 03</span><span class="plate-caption">Bukhansan, seen from a roofline.</span></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="place place-seoul">
-      <div class="running-head">
-        <span>MY NAME IS.</span>
-        <span>PLACE 02 OF 03 — SEOUL</span>
-      </div>
-      <div class="place-photo reveal">
-        <img src="assets/seoul.webp" alt="Seoul 향수 제품">
-      </div>
-      <div class="place-text reveal">
-        <span>002</span>
-        <p class="hello">HELLO.</p>
-        <h2>MY NAME IS<br><em>SEOUL.</em></h2>
-        <p class="voice">
-          Cold from afar.<br>
-          Warm when you stay.
-        </p>
-        <div class="notes">
-          <div class="notes-row"><span class="notes-label">TOP</span><span class="notes-value">Musk, Aldehyde</span></div>
-          <div class="notes-row"><span class="notes-label">MIDDLE</span><span class="notes-value">Musk, Rose, Violet, Muguet, Jasmine</span></div>
-          <div class="notes-row"><span class="notes-label">BASE</span><span class="notes-value">Musk, Sandalwood, Tonka Bean, Moss, Vanilla</span></div>
-        </div>
-        <div class="meta">EAU DE PARFUM · 30ML</div>
-      </div>
-      <div class="plate-grid reveal">
-        <figure class="plate plate-large">
-          <img src="assets/city-seoul-11.webp" alt="Hanok rooftops with Namsan Tower">
-          <figcaption><span class="plate-no">PLATE 04</span><span class="plate-caption">Old roofs, new tower, same skyline.</span></figcaption>
-        </figure>
-        <figure class="plate">
-          <img src="assets/city-seoul-09.webp" alt="Hanyangdoseong fortress wall in the mountains">
-          <figcaption><span class="plate-no">PLATE 05</span><span class="plate-caption">Hanyangdoseong, the wall that held the city.</span></figcaption>
-        </figure>
-        <figure class="plate">
-          <img src="assets/city-seoul-08.webp" alt="Han River bridge at night">
-          <figcaption><span class="plate-no">PLATE 06</span><span class="plate-caption">The river, after dark.</span></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="place place-seongsu">
-      <div class="running-head">
-        <span>MY NAME IS.</span>
-        <span>PLACE 03 OF 03 — SEONGSU</span>
-      </div>
-      <div class="place-text reveal">
-        <span>003</span>
-        <p class="hello">HELLO.</p>
-        <h2>MY NAME IS<br><em>SEONGSU.</em></h2>
-        <p class="voice">
-          I keep changing.<br>
-          But I never forget<br>
-          where I began.
-        </p>
-        <div class="notes">
-          <div class="notes-row"><span class="notes-label">TOP</span><span class="notes-value">Ambrette, Sapodilla, Pink Pepper</span></div>
-          <div class="notes-row"><span class="notes-label">MIDDLE</span><span class="notes-value">Rose, Magnolia, Sandalwood</span></div>
-          <div class="notes-row"><span class="notes-label">BASE</span><span class="notes-value">Ambergris, Cedarwood, Musk</span></div>
-        </div>
-        <div class="meta">EAU DE PARFUM · 30ML</div>
-      </div>
-      <div class="place-photo reveal">
-        <img src="assets/seongsu.webp" alt="Seongsu 향수 제품">
-      </div>
-      <div class="plate-grid reveal">
-        <figure class="plate plate-large">
-          <img src="assets/city-seongsu-08.webp" alt="Narrow alley framing a tower building">
-          <figcaption><span class="plate-no">PLATE 07</span><span class="plate-caption">An alley, and the tower it leads to.</span></figcaption>
-        </figure>
-        <figure class="plate">
-          <img src="assets/city-seongsu-05.webp" alt="Empty elevated walkway corridor">
-          <figcaption><span class="plate-no">PLATE 08</span><span class="plate-caption">A walkway with nowhere to be.</span></figcaption>
-        </figure>
-        <figure class="plate">
-          <img src="assets/city-seongsu-03.webp" alt="Rooftop view with mountain in the distance">
-          <figcaption><span class="plate-no">PLATE 09</span><span class="plate-caption">Rooftops, and the mountain behind them.</span></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="find" class="find">
-      <div class="find-copy reveal">
-        <span>OFFLINE ONLY</span>
-        <h2>Meet the place<br>in person.</h2>
-        <p>
-          We do not sell online. Fragrance only exists offline.<br>
-          One dispenser. One coordinate. Step outside it, and the scent is gone.
-        </p>
-      </div>
-
-      <div class="find-body">
-        <div class="find-visual-group">
-          <figure class="find-visual reveal">
-            <img src="assets/find-seongsu-machine.webp" alt="Seongsu 향수 자판기, 벽면에 Every town has a smell 슬로건">
-          </figure>
-          <figure class="find-visual reveal">
-            <img src="assets/vending-korea.webp" alt="Korea perfume vending machine">
-          </figure>
-        </div>
-
-        <div class="find-list reveal">
-          <a class="find-row" href="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%88%98%EB%8F%992%EA%B0%80%20322-1" target="_blank" rel="noopener">
-            <span class="find-index">001</span>
-            <span class="find-name">SEONGSU</span>
-            <span class="find-coords">서울 성동구 성수동2가 322-1, 1층 광장</span>
-            <span class="find-go">VIEW MAP ↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="objects" class="objects">
-      <div class="objects-head reveal">
-        <span>OBJECTS / DETAILS / MEMORY</span>
-        <h2>A place,<br>made tangible.</h2>
-      </div>
-
-      <div class="gallery">
-        <figure class="wide reveal">
-          <img src="assets/all-products.webp" alt="Korea, Seoul, Seongsu 향수 제품">
-        </figure>
-        <figure class="reveal">
-          <img src="assets/package-still.webp" alt="향수와 패키지">
-        </figure>
-        <figure class="reveal">
-          <img src="assets/package-wall.webp" alt="벽돌 배경의 패키지">
-        </figure>
-        <figure class="reveal">
-          <img src="assets/package-open.webp" alt="열린 패키지와 Seongsu 향수">
-        </figure>
-      </div>
-    </section>
-
-    <section id="next" class="next panel">
-      <figure class="next-visual reveal">
-        <img src="assets/vending-somewhere.webp" alt="Perfume vending machine in a rainy city">
-      </figure>
-
-      <div class="next-row">
-        <div class="next-copy reveal">
-          <span>WHERE ARE YOU FROM?</span>
-          <h2>We’re looking<br>for your place.</h2>
-          <p>Maybe your town will introduce itself next.</p>
-        </div>
-
-        <div class="archive-list reveal">
-          <div><span>CURRENT ARCHIVE</span><strong>03 PLACES</strong></div>
-          <ol>
-            <li><span>001</span>KOREA</li>
-            <li><span>002</span>SEOUL</li>
-            <li><span>003</span>SEONGSU</li>
-          </ol>
-          <div class="future"><span>NEXT</span><strong>YOUR TOWN.</strong></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <img src="assets/brand-logo.png" alt="my name is.">
-    <p>Every town has a smell.</p>
-    <p>
-      © <span id="year"></span> MY NAME IS.<br>
-      <a href="https://www.instagram.com/mynameis_offcial/" target="_blank" rel="noopener" class="ig-link" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18" rx="5"/>
-          <circle cx="12" cy="12" r="4.2"/>
-          <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/>
-        </svg>
+  <main class="mosaic-shell">
+    <section class="mosaic-grid" aria-label="MY NAME IS. place archive">
+      <a class="mosaic-tile tile-korea-a" href="korea.html">
+        <img class="tile-base" src="assets/city-korea-03.webp" alt="Korea palace at dusk">
+        <img class="tile-hover" src="assets/korea.webp" alt="Korea perfume">
+        <div class="tile-label"><span>001</span><strong>KOREA</strong></div>
       </a>
-    </p>
-  </footer>
+
+      <a class="mosaic-tile tile-seoul-a" href="seoul.html">
+        <img class="tile-base" src="assets/city-seoul-11.webp" alt="Seoul hanok and tower">
+        <img class="tile-hover" src="assets/seoul.webp" alt="Seoul perfume">
+        <div class="tile-label"><span>002</span><strong>SEOUL</strong></div>
+      </a>
+
+      <a class="mosaic-tile tile-seongsu-a" href="seongsu.html">
+        <img class="tile-base" src="assets/city-seongsu-08.webp" alt="Seongsu alley">
+        <img class="tile-hover" src="assets/seongsu.webp" alt="Seongsu perfume">
+        <div class="tile-label"><span>003</span><strong>SEONGSU</strong></div>
+      </a>
+
+      <a class="mosaic-tile tile-korea-b" href="korea.html">
+        <img class="tile-base" src="assets/city-korea-05.webp" alt="Korea palace corridor">
+        <img class="tile-hover" src="assets/korea.webp" alt="Korea perfume">
+        <div class="tile-label"><span>PLACE 001</span><strong>KOREA</strong></div>
+      </a>
+
+      <div class="mosaic-center" aria-label="MY NAME IS.">
+        <img src="assets/brand-logo.png" alt="my name is.">
+        <p>Every town has a smell.</p>
+        <span>SELECT A PLACE</span>
+      </div>
+
+      <a class="mosaic-tile tile-seoul-b" href="seoul.html">
+        <img class="tile-base" src="assets/city-seoul-08.webp" alt="Seoul Han River at night">
+        <img class="tile-hover" src="assets/seoul.webp" alt="Seoul perfume">
+        <div class="tile-label"><span>PLACE 002</span><strong>SEOUL</strong></div>
+      </a>
+
+      <a class="mosaic-tile tile-seongsu-b" href="seongsu.html">
+        <img class="tile-base" src="assets/city-seongsu-05.webp" alt="Seongsu walkway">
+        <img class="tile-hover" src="assets/seongsu.webp" alt="Seongsu perfume">
+        <div class="tile-label"><span>PLACE 003</span><strong>SEONGSU</strong></div>
+      </a>
+
+      <a class="mosaic-tile tile-machine-a" href="dispenser.html">
+        <img class="tile-base" src="assets/vending-korea.webp" alt="Korea perfume vending machine">
+        <img class="tile-hover" src="assets/all-products.webp" alt="MY NAME IS. perfume collection">
+        <div class="tile-label"><span>OFFLINE 001</span><strong>DISPENSER</strong></div>
+      </a>
+
+      <a class="mosaic-tile tile-machine-b" href="dispenser.html">
+        <img class="tile-base" src="assets/vending-somewhere.webp" alt="Perfume vending machine in a rainy city">
+        <img class="tile-hover" src="assets/find-seongsu-machine.webp" alt="Seongsu perfume vending machine">
+        <div class="tile-label"><span>OFFLINE / NEXT</span><strong>FIND US</strong></div>
+      </a>
+    </section>
+
+    <div class="mosaic-footer">
+      <span>HOVER TO MEET THE FRAGRANCE</span>
+      <span>CLICK TO ENTER THE PLACE ↗</span>
+    </div>
+  </main>
 
   <script src="script.js"></script>
 </body>

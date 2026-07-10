@@ -1,19 +1,21 @@
-MY NAME IS. V7.5.1 FIXED
+MY NAME IS. V8 MOSAIC
 
-이 버전은 현재 정상 사이트 구조를 유지하고 첫 화면만 수정했습니다.
+적용 방법
+1. ZIP을 압축 해제합니다.
+2. 아래 7개 파일을 GitHub 저장소 최상위에 업로드합니다.
+   - index.html
+   - korea.html
+   - seoul.html
+   - seongsu.html
+   - dispenser.html
+   - style.css
+   - script.js
+3. 기존 assets 폴더는 그대로 유지합니다.
+4. Commit changes를 누릅니다.
 
-교체 파일
-- index.html
-- style.css
-- script.js
-
-유지 파일
-- assets 폴더 전체
-- CNAME 및 기타 파일
-
-기능
-- 제품 3종 자동 회전
-- 화살표 / 드래그 / 마우스 휠 전환
-- 중앙 제품 클릭 시 제품 설명과 도시 사진 팝업
-- ESC 또는 CLOSE로 닫기
-- 기존 하단 KOREA / SEOUL / SEONGSU / FIND US / OBJECTS 섹션 유지
+구조
+- 첫 화면 3×3 모자이크
+- 가운데 브랜드 로고
+- 주변 도시 및 자판기 사진 8장
+- 마우스 오버 시 제품 이미지로 전환
+- 클릭 시 각 상세 페이지로 이동
