@@ -8,7 +8,21 @@
   --muted:#777;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+  scroll-snap-type:y mandatory;
+}
+.panel,
+.place,
+.city-archive,
+.dispenser,
+.objects,
+.next,
+footer{
+  scroll-snap-align:start;
+  scroll-snap-stop:always;
+  scroll-margin-top:0;
+}
 body{
   margin:0;
   background:var(--black);
