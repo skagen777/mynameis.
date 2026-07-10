@@ -757,3 +757,114 @@ button{font:inherit}
     grid-column:auto;
   }
 }
+
+
+/* =========================================================
+   V8.4.4 — INSTAGRAM ICON + LARGE LOCATION CTA
+   ========================================================= */
+
+/* Main archive Instagram icon */
+.archive-header{
+  mix-blend-mode:normal;
+  background:#000;
+}
+.instagram-link{
+  width:34px;
+  height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:50%;
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    transform .25s ease;
+}
+.instagram-link img{
+  width:18px;
+  height:18px;
+  object-fit:contain;
+}
+.instagram-link:hover{
+  background:var(--red);
+  border-color:var(--red);
+  transform:scale(1.06);
+}
+
+/* Large map/location button */
+.dispenser-copy .location-cta{
+  width:min(100%,520px);
+  margin-top:34px;
+  padding:24px 26px 22px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:9px 24px;
+  align-items:end;
+  border:0;
+  background:var(--red);
+  color:#fff;
+  box-shadow:0 18px 45px rgba(255,0,0,.18);
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+.dispenser-copy .location-cta span{
+  grid-column:1 / -1;
+  color:rgba(255,255,255,.72);
+  font-size:9px;
+  letter-spacing:.18em;
+}
+.dispenser-copy .location-cta strong{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(27px,2.6vw,42px);
+  line-height:.92;
+  font-weight:400;
+  letter-spacing:-.025em;
+}
+.dispenser-copy .location-cta small{
+  max-width:190px;
+  justify-self:end;
+  text-align:right;
+  color:#fff;
+  font-size:8px;
+  line-height:1.5;
+  letter-spacing:.12em;
+}
+.dispenser-copy .location-cta:hover{
+  transform:translateY(-4px);
+  background:#e60000;
+  box-shadow:0 25px 58px rgba(255,0,0,.28);
+}
+
+@media (max-width:767px){
+  .archive-header{
+    padding-right:8px;
+  }
+  .instagram-link{
+    width:30px;
+    height:30px;
+  }
+  .instagram-link img{
+    width:16px;
+    height:16px;
+  }
+
+  .dispenser-copy .location-cta{
+    width:100%;
+    margin-top:26px;
+    padding:20px 19px 18px;
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+  .dispenser-copy .location-cta strong{
+    font-size:clamp(30px,9vw,40px);
+  }
+  .dispenser-copy .location-cta small{
+    max-width:none;
+    justify-self:start;
+    text-align:left;
+    font-size:7px;
+  }
+}
