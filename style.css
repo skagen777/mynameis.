@@ -462,3 +462,146 @@ footer p{
     max-height:none;
   }
 }
+
+
+/* V7.2 — city archive and vending machine */
+.city-archive{
+  background:#e9e6df;
+  color:#111;
+  padding:13vh 7vw 15vh;
+}
+.section-intro{
+  max-width:1180px;
+  margin:0 auto 9vh;
+  display:grid;
+  grid-template-columns:180px 1fr 320px;
+  gap:5vw;
+  align-items:end;
+}
+.section-intro>span,
+.city-label span,
+.dispenser-copy>span{
+  font-size:11px;
+  letter-spacing:.17em;
+}
+.section-intro h2,
+.dispenser-copy h2{
+  margin:0;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(50px,5.8vw,86px);
+  line-height:.9;
+  font-weight:400;
+  letter-spacing:-.04em;
+}
+.section-intro p{
+  margin:0;
+  font-size:16px;
+  line-height:1.65;
+}
+.city-grid{
+  max-width:1180px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:54px 28px;
+}
+.city-card{
+  margin:0;
+}
+.city-card-large{
+  grid-column:1 / -1;
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.city-label{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:14px;
+  padding-bottom:12px;
+  border-bottom:1px solid rgba(0,0,0,.22);
+}
+.city-label strong{
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:24px;
+  font-weight:400;
+}
+.city-card img{
+  width:100%;
+  height:auto;
+  aspect-ratio:4/5;
+  object-fit:cover;
+}
+.city-card-large img{
+  aspect-ratio:4/5;
+}
+
+.dispenser{
+  background:#050505;
+  color:white;
+  padding:13vh 7vw 15vh;
+}
+.dispenser-copy{
+  max-width:1180px;
+  margin:0 auto 9vh;
+  display:grid;
+  grid-template-columns:180px 1fr 320px;
+  gap:5vw;
+  align-items:end;
+}
+.dispenser-copy p{
+  margin:0;
+  color:#bbb;
+  font-size:17px;
+  line-height:1.65;
+}
+.dispenser-grid{
+  max-width:1180px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:start;
+}
+.dispenser-grid figure{
+  margin:0;
+}
+.dispenser-grid img{
+  width:100%;
+  height:auto;
+  aspect-ratio:4/5;
+  object-fit:cover;
+}
+.dark-label{
+  border-color:#2b2b2b;
+}
+.dark-label strong{
+  color:#ff0000;
+}
+
+@media (max-width:900px){
+  .topbar nav a:nth-child(3){display:none}
+  .section-intro,
+  .dispenser-copy{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+  .section-intro p,
+  .dispenser-copy p{
+    max-width:320px;
+  }
+  .city-archive,
+  .dispenser{
+    padding:95px 22px 110px;
+  }
+  .city-grid,
+  .dispenser-grid{
+    grid-template-columns:1fr;
+    gap:44px;
+  }
+  .city-card-large{
+    grid-column:auto;
+    max-width:none;
+  }
+}
