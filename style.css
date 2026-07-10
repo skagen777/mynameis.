@@ -177,9 +177,8 @@ a{color:inherit;text-decoration:none}
   overflow:hidden;
 }
 .place-photo img{
-  transition:transform 1.2s ease;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1);
 }
-.place:hover .place-photo img{transform:scale(1.018)}
 
 .find{
   background:#0c0c0c;
@@ -217,17 +216,22 @@ a{color:inherit;text-decoration:none}
   max-width:1180px;
   margin:0 auto;
   display:grid;
-  grid-template-columns:360px 1fr;
+  grid-template-columns:260px 1fr;
   gap:56px;
   align-items:start;
 }
 .find-visual{
   margin:0;
+  background:#111;
+  border:1px solid #262626;
+  padding:14px;
+  overflow:hidden;
 }
 .find-visual img{
   width:100%;
   height:auto;
   display:block;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1);
 }
 .find-list{
   border-top:1px solid #222;
@@ -309,9 +313,8 @@ a{color:inherit;text-decoration:none}
 }
 .gallery figure img{
   aspect-ratio:4/5;
-  transition:transform 1s ease;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1);
 }
-.gallery figure:hover img{transform:scale(1.018)}
 .gallery .wide{
   grid-row:span 2;
 }
@@ -486,9 +489,6 @@ footer p{
   max-height:680px;
   object-fit:contain;
   object-position:center;
-}
-.place:hover .place-photo img{
-  transform:scale(1.01);
 }
 
 .objects{
@@ -676,6 +676,12 @@ footer p{
   max-height:440px;
   object-fit:cover;
   background:#e7e3dc;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1);
+}
+.filmstrip-track img:hover{
+  transform:scale(1.08);
+  position:relative;
+  z-index:2;
 }
 @keyframes filmstrip-scroll{
   from{ transform:translateX(0); }
@@ -722,6 +728,7 @@ footer p{
   display:flex;
   align-items:center;
   justify-content:center;
+  overflow:hidden;
 }
 .dispenser-grid img{
   width:100%;
@@ -729,6 +736,10 @@ footer p{
   max-height:56vh;
   object-fit:contain;
   aspect-ratio:auto;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1);
+}
+.dispenser-grid figure:hover img{
+  transform:scale(1.06);
 }
 .dark-label{
   border-color:#2b2b2b;
@@ -797,5 +808,25 @@ footer p{
   }
   .filmstrip-track img{
     height:30vh;
+  }
+}
+
+/* Unified hover-zoom: image scales up within its frame on hover */
+.place:hover .place-photo img{
+  transform:scale(1.06);
+}
+.gallery figure:hover img{
+  transform:scale(1.06);
+}
+.find-visual:hover img{
+  transform:scale(1.06);
+}
+@media (hover:none){
+  .place:hover .place-photo img,
+  .gallery figure:hover img,
+  .find-visual:hover img,
+  .dispenser-grid figure:hover img,
+  .filmstrip-track img:hover{
+    transform:none;
   }
 }
