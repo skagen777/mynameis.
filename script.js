@@ -1,1 +1,12 @@
-const b=document.querySelector('.menu-toggle'),n=document.querySelector('.nav');b?.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o));b.textContent=o?'close':'menu'});n?.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{n.classList.remove('open');b?.setAttribute('aria-expanded','false');if(b)b.textContent='menu'}));const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ob.unobserve(e.target)}}),{threshold:.15});document.querySelectorAll('.reveal').forEach(e=>ob.observe(e));document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.14 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
