@@ -1,15 +1,9 @@
-# MY NAME IS. Website V7
+# MY NAME IS. Website V7.1
 
-## 적용
-1. 압축을 풉니다.
-2. GitHub 저장소에서 Add file → Upload files.
-3. 모든 파일과 assets 폴더를 업로드합니다.
-4. Commit changes를 누릅니다.
-
-## 주요 변경
-- 실제 제품 사진 적용
-- 제품 순서: Korea → Seoul → Seongsu
-- 로고 중심 첫 화면
-- 제품 및 패키지 갤러리
-- 마지막 YOUR TOWN 섹션
+- 제품 사진 크기 축소
+- 사진을 화면 전체가 아닌 프레임 안에서 보이도록 변경
+- 제품 사진 잘림 최소화
+- 본문과 메뉴 글자 크기 및 굵기 강화
+- 도시명에만 빨간색 강조
+- 모바일 이미지 비율 개선
 - CNAME 포함
