@@ -5,85 +5,96 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>MY NAME IS. — Every town has a smell.</title>
   <meta name="description" content="장소가 자신의 이름을 향으로 소개합니다.">
+  <meta property="og:title" content="MY NAME IS.">
+  <meta property="og:description" content="Every town has a smell.">
+  <meta property="og:image" content="https://my-nameis.com/assets/collection-product.webp">
   <link rel="canonical" href="https://my-nameis.com/">
   <meta name="theme-color" content="#000000">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="home-page">
-  <header class="site-header">
-    <a class="header-mark" href="index.html" aria-label="MY NAME IS. 홈">
-      <img src="assets/brand-logo.png" alt="my name is.">
-    </a>
-    <nav>
-      <a href="korea.html">KOREA</a>
-      <a href="seoul.html">SEOUL</a>
-      <a href="seongsu.html">SEONGSU</a>
-      <a href="dispenser.html">FIND US</a>
-      <a href="https://www.instagram.com/mynameis_offcial/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
-    </nav>
+<body class="home">
+  <header class="home-header">
+    <span>PLACE ARCHIVE / 001—003</span>
+    <a href="https://www.instagram.com/mynameis_offcial/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
   </header>
 
-  <main class="mosaic-shell">
-    <section class="mosaic-grid" aria-label="MY NAME IS. place archive">
-      <a class="mosaic-tile tile-korea-a" href="korea.html">
-        <img class="tile-base" src="assets/city-korea-03.webp" alt="Korea palace at dusk">
-        <img class="tile-hover" src="assets/korea.webp" alt="Korea perfume">
-        <div class="tile-label"><span>001</span><strong>KOREA</strong></div>
+  <main class="mosaic-page">
+    <section class="mosaic" aria-label="MY NAME IS. Place Archive">
+      <a class="tile tile-korea" href="korea.html" data-touch-tile>
+        <img class="base" src="assets/korea-city-01.webp" alt="Korea">
+        <img class="reveal-product" src="assets/korea-product.webp" alt="Korea perfume">
+        <span class="tile-number">001</span>
+        <span class="tile-name">KOREA</span>
+        <span class="tile-view">VIEW PLACE ↗</span>
       </a>
 
-      <a class="mosaic-tile tile-seoul-a" href="seoul.html">
-        <img class="tile-base" src="assets/city-seoul-11.webp" alt="Seoul hanok and tower">
-        <img class="tile-hover" src="assets/seoul.webp" alt="Seoul perfume">
-        <div class="tile-label"><span>002</span><strong>SEOUL</strong></div>
+      <a class="tile tile-seoul" href="seoul.html" data-touch-tile>
+        <img class="base" src="assets/seoul-city-01.webp" alt="Seoul">
+        <img class="reveal-product" src="assets/seoul-product.webp" alt="Seoul perfume">
+        <span class="tile-number">002</span>
+        <span class="tile-name">SEOUL</span>
+        <span class="tile-view">VIEW PLACE ↗</span>
       </a>
 
-      <a class="mosaic-tile tile-seongsu-a" href="seongsu.html">
-        <img class="tile-base" src="assets/city-seongsu-08.webp" alt="Seongsu alley">
-        <img class="tile-hover" src="assets/seongsu.webp" alt="Seongsu perfume">
-        <div class="tile-label"><span>003</span><strong>SEONGSU</strong></div>
+      <a class="tile tile-seongsu" href="seongsu.html" data-touch-tile>
+        <img class="base" src="assets/seongsu-city-01.webp" alt="Seongsu">
+        <img class="reveal-product" src="assets/seongsu-product.webp" alt="Seongsu perfume">
+        <span class="tile-number">003</span>
+        <span class="tile-name">SEONGSU</span>
+        <span class="tile-view">VIEW PLACE ↗</span>
       </a>
 
-      <a class="mosaic-tile tile-korea-b" href="korea.html">
-        <img class="tile-base" src="assets/city-korea-05.webp" alt="Korea palace corridor">
-        <img class="tile-hover" src="assets/korea.webp" alt="Korea perfume">
-        <div class="tile-label"><span>PLACE 001</span><strong>KOREA</strong></div>
+      <a class="tile tile-vending-korea" href="dispenser.html" data-touch-tile>
+        <img class="base" src="assets/vending-korea.webp" alt="Korea vending machine">
+        <img class="reveal-product" src="assets/collection-product.webp" alt="Perfume collection">
+        <span class="tile-number">OFFLINE 001</span>
+        <span class="tile-name">DISPENSER</span>
+        <span class="tile-view">FIND US ↗</span>
       </a>
 
-      <div class="mosaic-center" aria-label="MY NAME IS.">
+      <div class="center-logo">
         <img src="assets/brand-logo.png" alt="my name is.">
-        <p>Every town has a smell.</p>
-        <span>SELECT A PLACE</span>
+        <p>Every town<br>has a smell.</p>
+        <span>HOVER A PLACE</span>
       </div>
 
-      <a class="mosaic-tile tile-seoul-b" href="seoul.html">
-        <img class="tile-base" src="assets/city-seoul-08.webp" alt="Seoul Han River at night">
-        <img class="tile-hover" src="assets/seoul.webp" alt="Seoul perfume">
-        <div class="tile-label"><span>PLACE 002</span><strong>SEOUL</strong></div>
+      <a class="tile tile-vending-city" href="dispenser.html" data-touch-tile>
+        <img class="base" src="assets/vending-somewhere.webp" alt="Vending machine somewhere">
+        <img class="reveal-product" src="assets/package-still.webp" alt="MY NAME IS. package">
+        <span class="tile-number">OFFLINE / NEXT</span>
+        <span class="tile-name">SOMEWHERE</span>
+        <span class="tile-view">FIND US ↗</span>
       </a>
 
-      <a class="mosaic-tile tile-seongsu-b" href="seongsu.html">
-        <img class="tile-base" src="assets/city-seongsu-05.webp" alt="Seongsu walkway">
-        <img class="tile-hover" src="assets/seongsu.webp" alt="Seongsu perfume">
-        <div class="tile-label"><span>PLACE 003</span><strong>SEONGSU</strong></div>
+      <a class="tile tile-korea-2" href="korea.html" data-touch-tile>
+        <img class="base" src="assets/offline-poster.webp" alt="We do not sell online poster">
+        <img class="reveal-product" src="assets/korea-product.webp" alt="Korea perfume">
+        <span class="tile-number">MANIFESTO</span>
+        <span class="tile-name">KOREA</span>
+        <span class="tile-view">VIEW PLACE ↗</span>
       </a>
 
-      <a class="mosaic-tile tile-machine-a" href="dispenser.html">
-        <img class="tile-base" src="assets/vending-korea.webp" alt="Korea perfume vending machine">
-        <img class="tile-hover" src="assets/all-products.webp" alt="MY NAME IS. perfume collection">
-        <div class="tile-label"><span>OFFLINE 001</span><strong>DISPENSER</strong></div>
+      <a class="tile tile-seoul-2" href="seoul.html" data-touch-tile>
+        <img class="base" src="assets/seoul-city-02.webp" alt="Seoul">
+        <img class="reveal-product" src="assets/seoul-product.webp" alt="Seoul perfume">
+        <span class="tile-number">002 / DETAIL</span>
+        <span class="tile-name">SEOUL</span>
+        <span class="tile-view">VIEW PLACE ↗</span>
       </a>
 
-      <a class="mosaic-tile tile-machine-b" href="dispenser.html">
-        <img class="tile-base" src="assets/vending-somewhere.webp" alt="Perfume vending machine in a rainy city">
-        <img class="tile-hover" src="assets/find-seongsu-machine.webp" alt="Seongsu perfume vending machine">
-        <div class="tile-label"><span>OFFLINE / NEXT</span><strong>FIND US</strong></div>
+      <a class="tile tile-seongsu-2" href="seongsu.html" data-touch-tile>
+        <img class="base" src="assets/seongsu-city-02.webp" alt="Seongsu">
+        <img class="reveal-product" src="assets/seongsu-product.webp" alt="Seongsu perfume">
+        <span class="tile-number">003 / DETAIL</span>
+        <span class="tile-name">SEONGSU</span>
+        <span class="tile-view">VIEW PLACE ↗</span>
       </a>
     </section>
 
-    <div class="mosaic-footer">
-      <span>HOVER TO MEET THE FRAGRANCE</span>
-      <span>CLICK TO ENTER THE PLACE ↗</span>
+    <div class="bottom-guide">
+      <span>HOVER → PRODUCT</span>
+      <span>CLICK → PLACE DETAIL</span>
     </div>
   </main>
 

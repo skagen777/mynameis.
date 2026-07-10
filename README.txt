@@ -1,21 +1,18 @@
-MY NAME IS. V8 MOSAIC
+MY NAME IS. V8.1 COMPLETE
 
-적용 방법
-1. ZIP을 압축 해제합니다.
-2. 아래 7개 파일을 GitHub 저장소 최상위에 업로드합니다.
-   - index.html
-   - korea.html
-   - seoul.html
-   - seongsu.html
-   - dispenser.html
-   - style.css
-   - script.js
-3. 기존 assets 폴더는 그대로 유지합니다.
+중요:
+이번 ZIP은 HTML/CSS/JS뿐 아니라 사용되는 모든 이미지와 CNAME까지 포함한 완전한 패키지입니다.
+
+적용:
+1. ZIP 압축을 풉니다.
+2. GitHub 저장소의 기존 파일을 모두 선택합니다.
+3. assets 폴더를 포함해 ZIP 안의 모든 파일을 업로드합니다.
 4. Commit changes를 누릅니다.
 
-구조
-- 첫 화면 3×3 모자이크
-- 가운데 브랜드 로고
-- 주변 도시 및 자판기 사진 8장
-- 마우스 오버 시 제품 이미지로 전환
-- 클릭 시 각 상세 페이지로 이동
+첫 화면:
+- 3×3 모자이크
+- 중앙 브랜드 로고
+- 주변 도시·자판기·포스터 8개
+- 마우스 오버 시 제품 이미지
+- 클릭 시 상세 페이지
+- 모바일은 첫 탭으로 제품 미리보기, 두 번째 탭으로 상세 이동
