@@ -1,14 +1,13 @@
-MY NAME IS. V8.4.9.2 GOOGLE PLACE
+MY NAME IS. V8.4.10 MAIN IMAGES
 
 변경 사항
-- 모든 FIND US 링크를 새 Google 지도 등록 페이지로 변경
-- KOREA / SEOUL / SEONGSU의 KRW 49,000 링크도 동일한 지도 페이지로 변경
-- 기존 FIND US 버튼 유지
-- 가격 인라인 표시 패치 유지
-- 나머지 디자인과 페이지 구조는 변경하지 않음
+- 3×3 메인 KOREA 사진 교체
+- 3×3 메인 SEOUL 사진 교체
+- 3×3 메인 SEONGSU 사진 교체
+- 제품 호버 이미지, 상세페이지, FIND US, 가격 지도 링크 유지
+- 캐시 버전 v=8410
 
-새 지도 링크
-https://share.google/TVmzcVlBkTMS2KCqh
+정리한 미사용 기존 이미지
+- brand-seoul-01.webp
 
-캐시 버전
-v=8492
+다른 상세페이지에서 계속 사용하는 기존 이미지는 삭제하지 않았습니다.
