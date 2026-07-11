@@ -1516,3 +1516,46 @@ button{font:inherit}
     transform:none !important;
   }
 }
+
+
+/* V8.4.14 fixes */
+.archive-place-main .tile-ui{
+  transform:none !important;
+}
+.archive-place-main .tile-ui>strong{
+  font-size:clamp(28px,3vw,48px) !important;
+}
+@media (max-width:767px){
+ .archive-place-main .tile-ui{
+   transform:none !important;
+ }
+ .archive-place-main .tile-ui>strong{
+   font-size:clamp(20px,6vw,28px) !important;
+   max-width:80% !important;
+ }
+ .archive-place-main[href="seongsu.html"]>.archive-image{
+   width:100% !important;
+   height:100% !important;
+   top:0 !important;
+   left:0 !important;
+   object-fit:cover !important;
+   background:none !important;
+ }
+ /* Somewhere mobile */
+ .somewhere-hero{
+   display:grid !important;
+   grid-template-columns:1fr !important;
+ }
+ .somewhere-hero figure{
+   aspect-ratio:unset !important;
+   height:auto !important;
+   overflow:visible !important;
+   background:none !important;
+ }
+ .somewhere-hero figure img{
+   width:100% !important;
+   height:auto !important;
+   object-fit:contain !important;
+   display:block !important;
+ }
+}
