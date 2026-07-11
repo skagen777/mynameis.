@@ -1440,3 +1440,79 @@ button{font:inherit}
     text-shadow:0 2px 14px rgba(0,0,0,.62) !important;
   }
 }
+
+
+/* =========================================================
+   V8.4.13 — TRUE MOBILE IMAGE FIT
+   ========================================================= */
+
+@media (max-width:767px){
+
+  /* SOMEWHERE: remove every fixed height/ratio so the original image is never cropped */
+  .somewhere-hero{
+    display:block !important;
+  }
+
+  .somewhere-hero figure{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    margin:28px 0 0 !important;
+    padding:0 !important;
+    overflow:visible !important;
+    background:#090909 !important;
+    display:block !important;
+  }
+
+  .somewhere-hero figure img{
+    position:static !important;
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    object-fit:initial !important;
+    object-position:center !important;
+    transform:none !important;
+    inset:auto !important;
+  }
+
+  /* Main place titles: smaller and slightly below center */
+  .archive-place-main .tile-ui{
+    align-items:center !important;
+    justify-content:center !important;
+    transform:translateY(7%) !important;
+  }
+
+  .archive-place-main .tile-ui > strong{
+    font-size:clamp(23px,7vw,32px) !important;
+    line-height:.92 !important;
+    max-width:88% !important;
+    text-shadow:0 2px 12px rgba(0,0,0,.56) !important;
+  }
+
+  /* SEONGSU: scale down the vertical photo and keep it centered */
+  .archive-place-main[href="seongsu.html"]{
+    background:#080808 !important;
+  }
+
+  .archive-place-main[href="seongsu.html"] > .archive-image{
+    width:88% !important;
+    height:88% !important;
+    top:6% !important;
+    left:6% !important;
+    right:auto !important;
+    bottom:auto !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    transform:none !important;
+    background:#080808 !important;
+  }
+
+  .archive-place-main[href="seongsu.html"]:hover > .archive-image,
+  .archive-place-main[href="seongsu.html"].is-preview > .archive-image{
+    transform:none !important;
+  }
+}
