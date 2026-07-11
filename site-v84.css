@@ -1360,3 +1360,83 @@ button{font:inherit}
     transform:scale(1.12);
   }
 }
+
+
+/* =========================================================
+   V8.4.12 — SOMEWHERE MOBILE FIT + CENTERED PLACE TITLES
+   ========================================================= */
+
+/* KOREA / SEOUL / SEONGSU: move the main title into the visual center */
+.archive-place-main .tile-ui{
+  inset:0 !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  pointer-events:none;
+}
+
+.archive-place-main .tile-ui > span,
+.archive-place-main .tile-ui > small{
+  display:none !important;
+}
+
+.archive-place-main .tile-ui > strong{
+  max-width:92% !important;
+  margin:0 !important;
+  color:#fff !important;
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-size:clamp(34px,4.2vw,72px) !important;
+  line-height:.88 !important;
+  font-weight:400 !important;
+  letter-spacing:-.04em !important;
+  text-shadow:0 3px 20px rgba(0,0,0,.55) !important;
+  transform:translateY(0) !important;
+}
+
+.archive-place-main::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(
+    180deg,
+    rgba(0,0,0,.08) 0%,
+    rgba(0,0,0,.12) 42%,
+    rgba(0,0,0,.24) 100%
+  );
+  pointer-events:none;
+}
+
+.archive-place-main .tile-ui{
+  z-index:3 !important;
+}
+
+/* SOMEWHERE detail: mobile image must remain fully visible */
+@media (max-width:767px){
+  .somewhere-hero figure{
+    height:auto !important;
+    min-height:0 !important;
+    aspect-ratio:3 / 4 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    overflow:hidden !important;
+    background:#090909 !important;
+  }
+
+  .somewhere-hero figure img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    transform:none !important;
+  }
+
+  .archive-place-main .tile-ui > strong{
+    font-size:clamp(31px,10vw,46px) !important;
+    max-width:94% !important;
+    text-shadow:0 2px 14px rgba(0,0,0,.62) !important;
+  }
+}

@@ -1,9 +1,10 @@
-MY NAME IS. V8.4.11 CENTER LOGO
+MY NAME IS. V8.4.12
 
 변경 사항
-- 3×3 정가운데 카드의 문구 전부 제거
-- Every town has a smell. 제거
-- SELECT A PLACE 제거
-- 검정 프레임 안에 브랜드 로고만 크게 표시
-- 다른 8개 카드, 상세페이지, 지도 링크는 그대로 유지
-- 캐시 버전 v=8411
+- SOMEWHERE 상세페이지 모바일 사진 잘림 수정
+- 모바일에서 SOMEWHERE 이미지를 object-fit: contain으로 전체 표시
+- 메인 3×3의 KOREA / SEOUL / SEONGSU 문구를 좌측 하단에서 이미지 중앙으로 이동
+- 세 도시명 크기 확대 및 가독성용 약한 그림자 적용
+- 세 도시 카드의 작은 번호와 안내 문구는 숨김
+- 다른 카드, 링크, 상세페이지, 지도 연결은 그대로 유지
+- 캐시 버전 v=8412
