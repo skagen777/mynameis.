@@ -1327,3 +1327,36 @@ button{font:inherit}
     font-size:9px;
   }
 }
+
+
+/* =========================================================
+   V8.4.11 — CENTER LOGO ONLY
+   ========================================================= */
+.archive-logo-only{
+  padding:0 !important;
+  background:#000 !important;
+}
+
+.archive-logo-only::before{
+  inset:5px !important;
+  border-color:#222 !important;
+}
+
+.archive-logo-only img{
+  position:relative;
+  z-index:2;
+  width:88% !important;
+  height:88% !important;
+  max-width:none !important;
+  object-fit:contain !important;
+  padding:0 !important;
+  transform:scale(1.08);
+}
+
+@media (max-width:767px){
+  .archive-logo-only img{
+    width:92% !important;
+    height:92% !important;
+    transform:scale(1.12);
+  }
+}

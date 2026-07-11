@@ -1,13 +1,9 @@
-MY NAME IS. V8.4.10 MAIN IMAGES
+MY NAME IS. V8.4.11 CENTER LOGO
 
 변경 사항
-- 3×3 메인 KOREA 사진 교체
-- 3×3 메인 SEOUL 사진 교체
-- 3×3 메인 SEONGSU 사진 교체
-- 제품 호버 이미지, 상세페이지, FIND US, 가격 지도 링크 유지
-- 캐시 버전 v=8410
-
-정리한 미사용 기존 이미지
-- brand-seoul-01.webp
-
-다른 상세페이지에서 계속 사용하는 기존 이미지는 삭제하지 않았습니다.
+- 3×3 정가운데 카드의 문구 전부 제거
+- Every town has a smell. 제거
+- SELECT A PLACE 제거
+- 검정 프레임 안에 브랜드 로고만 크게 표시
+- 다른 8개 카드, 상세페이지, 지도 링크는 그대로 유지
+- 캐시 버전 v=8411
