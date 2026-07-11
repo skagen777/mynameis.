@@ -1559,3 +1559,63 @@ button{font:inherit}
    display:block !important;
  }
 }
+
+
+/* =========================================================
+   V8.4.15 — MOBILE CARD ALIGNMENT FIX
+   ========================================================= */
+@media (max-width:767px){
+
+  /* KOREA / SEOUL / SEONGSU: force exact 50% / 50% center */
+  .archive-place-main .tile-ui{
+    position:absolute !important;
+    top:50% !important;
+    left:50% !important;
+    right:auto !important;
+    bottom:auto !important;
+    width:100% !important;
+    height:auto !important;
+    padding:0 6px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+    transform:translate(-50%,-50%) !important;
+    z-index:5 !important;
+  }
+
+  .archive-place-main .tile-ui > strong{
+    display:block !important;
+    margin:0 !important;
+    max-width:96% !important;
+    font-size:clamp(23px,7vw,32px) !important;
+    line-height:.9 !important;
+    text-align:center !important;
+    transform:none !important;
+  }
+
+  /* SOMEWHERE card: shrink the embedded-poster image so "somewhere" is fully visible */
+  .archive-tile[href="somewhere.html"]{
+    background:#050505 !important;
+    overflow:hidden !important;
+  }
+
+  .archive-tile[href="somewhere.html"] > .archive-image{
+    position:absolute !important;
+    top:5% !important;
+    left:5% !important;
+    width:90% !important;
+    height:90% !important;
+    right:auto !important;
+    bottom:auto !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+    transform:none !important;
+    background:#050505 !important;
+  }
+
+  .archive-tile[href="somewhere.html"]:hover > .archive-image,
+  .archive-tile[href="somewhere.html"].is-preview > .archive-image{
+    transform:none !important;
+  }
+}
