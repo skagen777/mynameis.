@@ -1,11 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://my-nameis.com/</loc></url>
-<url><loc>https://my-nameis.com/korea.html</loc></url>
-<url><loc>https://my-nameis.com/seoul.html</loc></url>
-<url><loc>https://my-nameis.com/seongsu.html</loc></url>
-<url><loc>https://my-nameis.com/dispenser.html</loc></url>
-<url><loc>https://my-nameis.com/somewhere.html</loc></url>
-<url><loc>https://my-nameis.com/manifesto.html</loc></url>
-<url><loc>https://my-nameis.com/final-destination.html</loc></url>
+  <url>
+    <loc>https://my-nameis.com/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://my-nameis.com/korea.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://my-nameis.com/seoul.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://my-nameis.com/seongsu.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://my-nameis.com/dispenser.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://my-nameis.com/somewhere.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://my-nameis.com/manifesto.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://my-nameis.com/final-destination.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://my-nameis.com/business.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://my-nameis.com/privacy.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://my-nameis.com/terms.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>

@@ -1,0 +1,16 @@
+{
+  "name": "MY NAME IS.",
+  "short_name": "MY NAME IS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#d40000",
+  "description": "Every Town Has a Smell.",
+  "icons": [
+    {
+      "src": "/assets/brand-logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
